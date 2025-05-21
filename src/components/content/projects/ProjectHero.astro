@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+
+const { title, image } = Astro.props;
+---
+
+<section
+  class="flex flex-col items-center justify-center w-full h-[300px] md:h-[400px] bg-cover bg-center rounded-lg shadow-lg"
+>
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <Image
+    src={image}
+    alt={title}
+    class="w-full h-full object-cover rounded-lg"
+  />
+  <div class="relative z-10 text-center text-white">
+    <h1 class="text-3xl font-bold">{title}</h1>
+  </div>
+</section>
