@@ -26,8 +26,11 @@ export const projects: Project[] = [
     role: "Full Stack Developer",
     shortDescription:
       "Event site for MetaFest: Croatia, built with Astro and Tailwind. Integrated Google Calendar syncing, dual payment systems (crypto + card), and real-time updates via a custom backend.",
-    description:
-      "Built and deployed the official website for MetaFest: Croatia, a Web3 community event hosted by MetaGame DAO. The site was developed using Astro and TailwindCSS, and optimised for speed and clarity with static site generation.\n\nTo support a dynamic and evolving schedule, I integrated the Google Calendar API via a custom Node.js backend, hosted securely on an encrypted remote server and managed with PM2. The backend fetched updated schedule data every minute, automatically triggering a rebuild and redeploy of the static frontend, ensuring attendees always saw the most up-to-date speaker and event information.\n\nThe site also featured dual-mode ecommerce integration: attendees could purchase tickets via a Croatian card processor or using crypto through a wallet connection. Both flows were designed to offer a consistent and user-friendly experience, regardless of payment method.",
+    description: `Built and deployed the official website for MetaFest: Croatia, a Web3 community event hosted by MetaGame DAO. The site was developed using Astro and TailwindCSS, and optimised for speed and clarity with static site generation.
+
+      To support a dynamic and evolving schedule, I integrated the Google Calendar API via a custom Node.js backend, hosted securely on an encrypted remote server and managed with PM2. The backend fetched updated schedule data every minute, automatically triggering a rebuild and redeploy of the static frontend, ensuring attendees always saw the most up-to-date speaker and event information.
+
+      The site also featured dual-mode ecommerce integration: attendees could purchase tickets via a Croatian card processor or using crypto through a wallet connection. Both flows were designed to offer a consistent and user-friendly experience, regardless of payment method.`,
     github: "https://github.com/luxumbra/mf-irl-astro",
     tech: [
       "AstroJS",
@@ -48,9 +51,18 @@ export const projects: Project[] = [
     title: "LEALcarbon Sustainability App",
     role: "Frontend Dev & UX/UI Designer",
     shortDescription:
-      "Multi-step onboarding and sustainability tracking UI with dark mode.",
-    description:
-      "Worked on a React-based sustainability app designed to help businesses track and manage their carbon footprint. Built onboarding flows, dashboard components, and contributed to visual theme and UX.",
+      "UX and UI design for a gamified sustainability app targeting individuals and corporate users. Delivered detailed flows, wireframes, and final designs in Figma.",
+    description: `Contracted to lead the UX and UI design for LEALcarbon, a sustainability-focused web app aimed at both individuals and corporate users. The app was designed to gamify carbon reduction and eco-conscious decision-making, with tailored user journeys for different user types.\n\nOver the course of the project, I worked in Figma and FigJam to deliver:
+
+      User flows and interaction diagrams
+
+      Wireframes and page layouts
+
+      User stories and experience maps
+
+      High-fidelity visual designs with modular components
+
+    The interface was designed to be clean, accessible, and modern, with clear incentives and feedback loops for both casual users and enterprise-level sustainability reporting. While the project ultimately did not proceed to development, the full UX and visual design system was completed and handed off for implementation.`,
     tech: ["React", "TypeScript", "Astro", "Figma", "TailwindCSS"],
     figma: "https://frst.uk/leal",
     link: "https://frst.uk/leal-preview",

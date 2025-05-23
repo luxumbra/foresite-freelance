@@ -1,20 +1,49 @@
 ---
+import Icon from "./Icon.astro";
+
 const technologies = [
-  "astro",
-  "react",
-  "typeScript",
-  "tailwindcss",
-  "next",
-  "nodejs",
-  "HTML5",
-  "CSS3",
-  "javaScript",
-  "git",
-  "supabase",
-  "blockchain",
-  "bash",
-  "wordpress",
-  "API",
+  {
+    label: "Astro",
+    name: "astro",
+  },
+  {
+    label: "React",
+    name: "react",
+  },
+  {
+    label: "Blockchain",
+    name: "blockchain",
+  },
+  {
+    label: "TypeScript",
+    name: "typescript",
+  },
+  {
+    label: "Figma",
+    name: "figma",
+  },
+  {
+    label: "TailwindCSS",
+    name: "tailwindcss",
+  },
+  {
+    label: "PHP",
+    name: "php",
+  },
+  {
+    label: "Wordpress",
+    name: "wordpress",
+  },
+  { name: "git", label: "Git" },
+  { name: "css3", label: "CSS3" },
+  { name: "html5", label: "HTML5" },
+  { name: "javascript", label: "JavaScript" },
+  { name: "nextjs", label: "Next.js" },
+  { name: "bash", label: "Bash" },
+  { name: "blockchain", label: "Blockchain" },
+  { name: "graphic-design", label: "Graphic Design" },
+  { name: "supabase", label: "Supabase" },
+  { name: "api", label: "API" },
 ];
 ---
 
@@ -30,18 +59,15 @@ const technologies = [
 
   <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
     {
-      [...technologies, ...technologies, ...technologies].map((tech) => (
-        <div class="flex items-center gap-2 group transition-all duration-300">
-          <img
-            src={`/svg/${tech}.svg`}
-            alt={tech}
-            class="h-7 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
-            width="30"
-            height="30"
-            loading="lazy"
+      technologies.map((tech) => (
+        <div class="flex items-center justify-start gap-2 group transition-all duration-300">
+          <Icon
+            name={tech.name}
+            wrapperClass="object-cover transition-transform group-hover:scale-110 opacity-60 flex-shrink"
+            svgClass="h-auto w-8 fill-slate-400"
           />
           <span class="text-lg font-medium text-[var(--white-icon)]">
-            {tech.charAt(0).toUpperCase() + tech.slice(1)}
+            {tech.label}
           </span>
         </div>
       ))
@@ -59,7 +85,7 @@ const technologies = [
     }
   }
   .animate-scroll {
-    animation: scroll 60s linear infinite;
+    animation: scroll 30s linear infinite;
   }
 
   @media (min-width: 768px) {

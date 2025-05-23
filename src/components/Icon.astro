@@ -1,0 +1,75 @@
+---
+import apiIcon from "~public/svg/api.svg";
+import astroIcon from "~public/svg/astro.svg";
+import bashIcon from "~public/svg/bash.svg";
+import blockchainIcon from "~public/svg/blockchain.svg";
+import css3Icon from "~public/svg/CSS3.svg";
+import figmaIcon from "~public/svg/figma.svg";
+import gitIcon from "~public/svg/git.svg";
+import designIcon from "~public/svg/design.svg";
+import html5Icon from "~public/svg/html5.svg";
+import javascriptIcon from "~public/svg/javascript.svg";
+import mysqlIcon from "~public/svg/mysql.svg";
+import nextIcon from "~public/svg/next.svg";
+import nextjsIcon from "~public/svg/nextjs.svg";
+import nodejsIcon from "~public/svg/nodejs.svg";
+import phpIcon from "~public/svg/php.svg";
+import reactIcon from "~public/svg/react.svg";
+import supabaseIcon from "~public/svg/supabase.svg";
+import tailwindcssIcon from "~public/svg/tailwindcss.svg";
+import typescriptIcon from "~public/svg/typescript.svg";
+import vercelIcon from "~public/svg/vercel.svg";
+import vueIcon from "~public/svg/vue.svg";
+import wordpressIcon from "~public/svg/wordpress.svg";
+import viteIcon from "~public/svg/vite.svg";
+import githubIcon from "~public/svg/github.svg";
+
+interface Props {
+  name: string;
+  wrapperClass?: string;
+  svgClass?: string;
+}
+
+const { name, wrapperClass = "", svgClass = "" } = Astro.props;
+
+const icons = {
+  api: apiIcon,
+  astro: astroIcon,
+  bash: bashIcon,
+  blockchain: blockchainIcon,
+  css3: css3Icon,
+  figma: figmaIcon,
+  git: gitIcon,
+  design: designIcon,
+  html5: html5Icon,
+  javascript: javascriptIcon,
+  mysql: mysqlIcon,
+  next: nextIcon,
+  nextjs: nextjsIcon,
+  nodejs: nodejsIcon,
+  php: phpIcon,
+  react: reactIcon,
+  supabase: supabaseIcon,
+  tailwindcss: tailwindcssIcon,
+  typescript: typescriptIcon,
+  vercel: vercelIcon,
+  vue: vueIcon,
+  wordpress: wordpressIcon,
+  vite: viteIcon,
+  github: githubIcon,
+};
+
+const Svg = icons[name.toLowerCase()] ?? null;
+---
+
+{
+  Svg ? (
+    <div class={`inline-flex items-center justify-center ${wrapperClass}`}>
+      <Svg class={svgClass} />
+    </div>
+  ) : (
+    <div class={`inline-block ${wrapperClass} text-red-500`}>
+      [Icon not found]
+    </div>
+  )
+}

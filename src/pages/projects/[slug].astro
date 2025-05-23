@@ -2,38 +2,42 @@
 import Nav from "@/components/Nav.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import { projects } from "@/data/projects";
 import type { Project } from "@/data/projects";
 import ProjectHero from "@/components/content/projects/ProjectHero.astro";
-import Footer from "@/components/Footer.astro";
+import { getCollection } from "astro:content";
+import { render } from "astro:content";
 
 export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.data.slug },
     props: { project },
   }));
 }
 
-const { project } = Astro.props as { project: Project };
+const { project } = Astro.props;
+console.log("🚀 - ", project.data.slug);
+const { Content } = await render(project);
 ---
 
 <Layout title="Dave Sayer, Projects">
   <Nav />
   <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
-    <ProjectHero title={project.title} image={project.image} />
-    <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
+    <ProjectHero title={project.data.title} image={project.data.image} />
+    <div class="max-w-5xl mx-auto space-y-10 md:py-28 pb-14">
       <div class="text-left space-y-4">
-        <h1 class="text-3xl font-bold mb-2">{project.title}</h1>
-        <p class="text-zinc-400 mb-4">{project.role}</p>
+        <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
+        <p class="text-zinc-400 mb-4">{project.data.role}</p>
 
-        <div class="mb-6">
-          <p class="text-lg leading-relaxed">{project.description}</p>
+        <div class="prose prose-lg prose-headings:text-slate-300 prose-invert">
+          <Content />
         </div>
 
-        <div class="mb-6">
+        <div class="mb-8">
           <h2 class="text-xl font-semibold mb-2">Tech Stack</h2>
           <ul class="list-disc list-inside">
-            {project.tech.map((tech) => <li>{tech}</li>)}
+            {project.data.tech.map((tech) => <li>{tech}</li>)}
           </ul>
         </div>
 
@@ -42,7 +46,7 @@ const { project } = Astro.props as { project: Project };
             project.github && (
               <p>
                 <a
-                  href={project.github}
+                  href={project.data.github}
                   target="_blank"
                   class="underline hover:text-blue-400"
                 >
@@ -55,7 +59,7 @@ const { project } = Astro.props as { project: Project };
             project.figma && (
               <p>
                 <a
-                  href={project.figma}
+                  href={project.data.figma}
                   target="_blank"
                   class="underline hover:text-blue-400"
                 >
@@ -72,5 +76,4 @@ const { project } = Astro.props as { project: Project };
       </div>
     </div>
   </section>
-  <Footer />
 </Layout>
