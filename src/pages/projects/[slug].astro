@@ -20,7 +20,11 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 ---
 
-<Layout title="Dave Sayer, Projects">
+<Layout
+  title="Dave Sayer, Projects"
+  ogTitle={`FRST.UK project: ${project.data.title}`}
+  ogDescription={project.data.shortDescription}
+>
   <Nav />
   <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
     <ProjectHero title={project.data.title} image={project.data.image} />

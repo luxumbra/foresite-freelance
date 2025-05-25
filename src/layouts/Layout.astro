@@ -6,22 +6,40 @@ import "@/style.css";
 
 interface Props {
   title: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogKeywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
 }
 
-const { title } = Astro.props;
+const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
+  Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Web Developer & Designer" />
+    <meta
+      name="description"
+      content={ogDescription || "Web Developer & Designer"}
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta property="og:title" content="Dave Sayer, Web Developer & Designer" />
-    <meta property="og:description" content="Web Developer & Designer" />
-    <meta property="og:image" content="https://web.frst.uk/og.image.png" />
-    <meta property="og:url" content="https://web.frst.uk" />
+    <meta
+      property="og:title"
+      content={ogTitle || "Dave Sayer, Web Developer & Designer"}
+    />
+    <meta
+      property="og:description"
+      content={ogDescription || "Web Developer & Designer"}
+    />
+    <meta
+      property="og:image"
+      content={ogImage || "https://web.frst.uk/og.image.png"}
+    />
+    <meta property="og:url" content={ogUrl || "https://web.frst.uk"} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Dave Sayer Portfolio" />
 

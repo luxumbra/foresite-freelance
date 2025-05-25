@@ -26,11 +26,14 @@ if (!project) {
         ) : null
       }
       <div
-        class="description-overlay absolute inset-0 z-10 flex items-center bg-gradient-to-t from-[var(--background)] to-[var(--background)]/50 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 duration-300 motion-reduce:transition-none"
+        class="description-overlay absolute inset-0 z-10 flex-col items-end justify-end bg-gradient-to-t from-[var(--background)] to-[var(--background)]/50 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 duration-300 motion-reduce:transition-none"
       >
         <p class="text-white text-sm md:text-base p-4">
           {project.shortDescription}
         </p>
+        <a href={`/projects/${project.slug}`} class="btn btn-neutral ml-3 mt-3">
+          Read more
+        </a>
       </div>
     </div>
     <div class="flex items-center justify-start space-y-3 lg:space-y-5 px-3">
@@ -86,12 +89,5 @@ if (!project) {
         }
       </div>
     </div>
-    <button
-      class="btn btn-neutral ml-3 mt-3"
-      data-modal-target={`modal-${project.slug}`}
-      onclick="toggleModal(this.dataset.modalTarget)"
-    >
-      Read more
-    </button>
   </a>
 </div>

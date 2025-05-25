@@ -16,6 +16,6 @@ image: ./metabuilders.png
 year: 2022
 ---
 
-I was tasked with the design and build of the MetaBuilders website, a marketing and information site for a Web3 agency and community of skilled freelancers. The project involved creating a modern, responsive layout that effectively communicated the brand's values and offerings and enabled users to purchase services as NFTs on the Ethereum blockchain.
+I led the design and development of the MetaBuilders website — a marketing and information platform for a Web3 agency and a global community of skilled freelancers. The goal was to create a clean, modern, and responsive site that clearly conveyed the brand’s ethos and service offerings, while integrating Web3 functionality to support service purchases as NFTs.
 
-The website was built using Vite, React, Typescript and TailwindCSS and hosted on Vercel, using Thirdweb's smart contracts for NFT minting and management.
+Built with Vite, React, TypeScript, and TailwindCSS, the site delivers a fast and fluid user experience across all devices. It is deployed on Vercel for scalable performance. Blockchain functionality was implemented using Thirdweb’s smart contracts, allowing users to mint and manage service-based NFTs directly on the Ethereum blockchain.
