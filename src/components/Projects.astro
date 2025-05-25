@@ -1,6 +1,10 @@
 ---
-import { projects } from "@/data/projects";
+import { sortProjectsByYear } from "@/utils/helpers";
 import ProjectCard from "@components/content/projects/ProjectCard.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const sortedProjects = sortProjectsByYear(projects);
 ---
 
 <section
@@ -12,7 +16,11 @@ import ProjectCard from "@components/content/projects/ProjectCard.astro";
     <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {projects.map((project, i) => i < 4 && <ProjectCard project={project} />)}
+      {
+        sortedProjects.map((project, i) => (
+          <ProjectCard project={project.data} />
+        ))
+      }
     </div>
     <a
       target="_blank"

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const typographyPlugin = require("@tailwindcss/typography");
+const daisyUI = require("daisyui");
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -17,5 +18,5 @@ export default {
       },
     },
   },
-  plugins: [typographyPlugin],
+  plugins: [typographyPlugin, daisyUI],
 };

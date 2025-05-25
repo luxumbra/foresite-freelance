@@ -1,7 +1,7 @@
 ---
 figma: https://frst.uk/leal
 link: https://frst.uk/leal-preview
-role: Frontend Dev & UX/UI Designer
+role: UX/UI Designer
 shortDescription: UX and UI design for a gamified sustainability app targeting individuals
   and corporate users. Delivered detailed flows, wireframes, and final designs in
   Figma.
@@ -9,12 +9,11 @@ slug: lealcarbon
 status: archived
 image: ./leal.png
 tech:
-- React
-- TypeScript
-- Astro
 - Figma
-- TailwindCSS
+- FigJam
 title: LEALcarbon Sustainability App
+shortTitle: LEALcarbon Sustainability
+year: 2023
 ---
 
 Contracted to lead the UX and UI design for LEALcarbon, a sustainability-focused web app aimed at both individuals and corporate users. The app was designed to gamify carbon reduction and eco-conscious decision-making, with tailored user journeys for different user types.

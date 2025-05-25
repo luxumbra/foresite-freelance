@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { Project } from "@/data/projects";
+import { Icon } from "astro-icon/components";
 const { project } = Astro.props as { project: Project };
 if (!project) {
   throw new Error("The 'project' property is required.");
@@ -8,25 +9,39 @@ if (!project) {
 ---
 
 <div class="group">
-  <a href={`/projects/${project.slug}`} class="block">
+  <a
+    href={`/projects/${project.slug}`}
+    class="flex justify-center items-start space-y-5"
+  >
     <div
-      class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4"
+      class="relative w-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4"
     >
       {
         project.image ? (
           <Image
             src={project.image}
             alt={project.title}
-            class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
+            class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300 z-0"
           />
         ) : null
       }
+      <div
+        class="description-overlay absolute inset-0 z-10 flex items-center bg-gradient-to-t from-[var(--background)] to-[var(--background)]/50 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0 duration-300 motion-reduce:transition-none"
+      >
+        <p class="text-white text-sm md:text-base p-4">
+          {project.shortDescription}
+        </p>
+      </div>
     </div>
-    <div class="flex items-center px-3">
+    <div class="flex items-center justify-start space-y-3 lg:space-y-5 px-3">
       <div class="flex-grow">
-        <h4 class="text-2xl font-semibold">{project.title}</h4>
-        <span class="py-1 text-sm text-[var(--white-icon)]">
-          {project.status}
+        <h4 class="text-2xl font-semibold">
+          {!project.shortTitle ? project.title : project.shortTitle}
+        </h4>
+        <p>{project.role}</p>
+        <span class="py-1 text-sm text-[var(--white-icon)] capitalize">
+          {project.year}
+          <span class="badge badge-sm">{project.status}</span>
         </span>
       </div>
       <div class="flex gap-2 ml-auto">
@@ -36,16 +51,10 @@ if (!project) {
               target="_blank"
               href={project.github}
               aria-label="GitHub"
+              title="GitHub Repository"
               class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-7"
-              >
-                <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
-              </svg>
+              <Icon name="mdi:github" class="size-7" />
             </a>
           ) : null
         }
@@ -55,44 +64,34 @@ if (!project) {
               target="_blank"
               href={project.figma}
               aria-label="Figma"
-              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+              title="Figma Design"
+              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)] object-fill"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-7"
-              >
-                <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
-              </svg>
+              <Icon name="lineicons:figma" class="size-7" />
             </a>
           ) : null
         }
-        <a
-          target="_blank"
-          href={project.link}
-          aria-label="Preview"
-          class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="size-7"
-          >
-            <path
-              d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"
-            ></path>
-          </svg>
-        </a>
+        {
+          project.link ? (
+            <a
+              target="_blank"
+              href={project.link}
+              aria-label="Preview"
+              title="View Project"
+              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+            >
+              <Icon name="mdi:web" class="size-7" />
+            </a>
+          ) : null
+        }
       </div>
     </div>
+    <button
+      class="btn btn-neutral ml-3 mt-3"
+      data-modal-target={`modal-${project.slug}`}
+      onclick="toggleModal(this.dataset.modalTarget)"
+    >
+      Read more
+    </button>
   </a>
-  <button
-    class="btn"
-    data-modal-target={`modal-${project.slug}`}
-    onclick="toggleModal(this.dataset.modalTarget)"
-  >
-    Read more
-  </button>
 </div>

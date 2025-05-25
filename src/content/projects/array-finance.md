@@ -11,6 +11,7 @@ tech:
 - Vite
 title: Array Finance
 image: ./array-finance.jpg
+year: 2021
 ---
 
 Implemented the frontend for a DeFi project using modern SSR tooling. Designed for performance and fast onboarding.

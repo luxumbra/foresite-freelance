@@ -2,7 +2,7 @@
 import Nav from "@/components/Nav.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import type { Project } from "@/data/projects";
+import { Icon } from "astro-icon/components";
 import ProjectHero from "@/components/content/projects/ProjectHero.astro";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
@@ -17,7 +17,6 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-console.log("🚀 - ", project.data.slug);
 const { Content } = await render(project);
 ---
 
@@ -26,53 +25,74 @@ const { Content } = await render(project);
   <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
     <ProjectHero title={project.data.title} image={project.data.image} />
     <div class="max-w-5xl mx-auto space-y-10 md:py-28 pb-14">
-      <div class="text-left space-y-4">
-        <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
-        <p class="text-zinc-400 mb-4">{project.data.role}</p>
-
-        <div class="prose prose-lg prose-headings:text-slate-300 prose-invert">
+      <div class="text-left space-y-5 lg:space-y-8">
+        <div>
+          <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
+          <p class="text-zinc-400 mb-4">{project.data.role}</p>
+        </div>
+        <div
+          class="prose prose-lg prose-headings:text-slate-300 prose-invert hover:prose-a:text-blue-400"
+        >
           <Content />
         </div>
 
-        <div class="mb-8">
+        <div class="tech-stack">
           <h2 class="text-xl font-semibold mb-2">Tech Stack</h2>
-          <ul class="list-disc list-inside">
-            {project.data.tech.map((tech) => <li>{tech}</li>)}
+          <ul class="flex items-start justify-start space-x-3">
+            {
+              project.data.tech.map((tech) => (
+                <li class="badge badge-primary">{tech}</li>
+              ))
+            }
           </ul>
         </div>
 
-        <div class="space-y-2">
+        <ul class="flex items-center justify-start space-x-5">
+          {
+            project.data.link && (
+              <li>
+                <a
+                  href={project.data.link}
+                  target="_blank"
+                  class="underline transition-colors duration-200 hover:text-blue-400 inline-flex items-center gap-x-1"
+                >
+                  <Icon name="mdi:web" /> View Website{" "}
+                  {/* <Icon name="mdi:external-link" /> */}
+                </a>
+              </li>
+            )
+          }
           {
             project.data.github && (
-              <p>
+              <li>
                 <a
                   href={project.data.github}
                   target="_blank"
-                  class="underline hover:text-blue-400"
+                  class="underline transition-colors duration-200 hover:text-blue-400  inline-flex items-center gap-x-1"
                 >
-                  View on GitHub →
+                  <Icon name="mdi:github" /> View on GitHub{" "}
+                  {/* <Icon name="mdi:external-link" /> */}
                 </a>
-              </p>
+              </li>
             )
           }
           {
             project.data.figma && (
-              <p>
+              <li>
                 <a
                   href={project.data.figma}
                   target="_blank"
-                  class="underline hover:text-blue-400"
+                  class="underline transition-colors duration-200 hover:text-blue-400 inline-flex items-center gap-x-1"
                 >
-                  View Figma Preview →
+                  <Icon name="lineicons:figma" /> View Figma Designs{" "}
+                  {/* <Icon name="mdi:external-link" /> */}
                 </a>
-              </p>
+              </li>
             )
           }
-        </div>
+        </ul>
 
-        <div class="mt-8">
-          <a href="/#projects" class="btn btn-outline">← Back to projects</a>
-        </div>
+        <a href="/#projects" class="btn btn-outline">← Back to projects</a>
       </div>
     </div>
   </section>

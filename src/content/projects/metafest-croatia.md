@@ -1,6 +1,6 @@
 ---
 github: https://github.com/luxumbra/mf-irl-astro
-link: https://metafest.xyz
+link: https://frst.uk/metafest
 role: Full Stack Developer
 shortDescription: 'Event site for MetaFest: Croatia, built with Astro and Tailwind.
   Integrated Google Calendar syncing, dual payment systems (crypto + card), and real-time
@@ -10,14 +10,16 @@ status: archived
 tech:
 - AstroJS
 - TailwindCSS
+- TypeScript
+- Web3 / Blockchain
 - Node
 - APIs
 - Fleek
 - PM2
 - Git
-- TypeScript
 title: 'MetaFest: Croatia'
 image: ./metafest-croatia.png
+year: 2023
 ---
 
 Built and deployed the official website for MetaFest: Croatia, a Web3 community event hosted by MetaGame DAO. The site was developed using Astro and TailwindCSS, and optimised for speed and clarity with static site generation.
