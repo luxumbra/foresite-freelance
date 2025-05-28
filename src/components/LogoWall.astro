@@ -2,48 +2,51 @@
 import Icon from "./Icon.astro";
 
 const technologies = [
+  { name: "css3", label: "CSS3" },
+  { name: "html5", label: "HTML5" },
+  { name: "javascript", label: "JavaScript" },
   {
-    label: "Astro",
-    name: "astro",
+    label: "TypeScript",
+    name: "typescript",
   },
   {
     label: "React",
     name: "react",
   },
   {
-    label: "Blockchain",
-    name: "blockchain",
+    label: "Astro",
+    name: "astro",
   },
+  { name: "nextjs", label: "Next.js" },
   {
-    label: "TypeScript",
-    name: "typescript",
-  },
-  {
-    label: "Figma",
-    name: "figma",
-  },
-  {
-    label: "TailwindCSS",
-    name: "tailwindcss",
+    label: "Wordpress",
+    name: "wordpress",
   },
   {
     label: "PHP",
     name: "php",
   },
   {
-    label: "Wordpress",
-    name: "wordpress",
+    label: "TailwindCSS",
+    name: "tailwindcss",
   },
-  { name: "git", label: "Git" },
-  { name: "css3", label: "CSS3" },
-  { name: "html5", label: "HTML5" },
-  { name: "javascript", label: "JavaScript" },
-  { name: "nextjs", label: "Next.js" },
-  { name: "bash", label: "Bash" },
-  { name: "blockchain", label: "Blockchain" },
-  { name: "graphic-design", label: "Graphic Design" },
+  {
+    label: "ChakraUI",
+    name: "chakraui",
+  },
   { name: "supabase", label: "Supabase" },
-  { name: "api", label: "API" },
+  {
+    label: "Blockchain",
+    name: "blockchain",
+  },
+  { name: "api", label: "APIs" },
+  { name: "git", label: "Git" },
+  { name: "bash", label: "Bash" },
+  { name: "graphic-design", label: "Graphic Design" },
+  {
+    label: "Figma",
+    name: "figma",
+  },
 ];
 ---
 
@@ -59,7 +62,7 @@ const technologies = [
 
   <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
     {
-      technologies.map((tech) => (
+      [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="flex items-center justify-start gap-2 group transition-all duration-300">
           <Icon
             name={tech.name}

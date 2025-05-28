@@ -7,6 +7,8 @@ import ProjectHero from "@/components/content/projects/ProjectHero.astro";
 import { getCollection } from "astro:content";
 import { render } from "astro:content";
 
+import "@/styles/projects.css";
+
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
 
@@ -25,11 +27,10 @@ const { Content } = await render(project);
   ogTitle={`FRST.UK project: ${project.data.title}`}
   ogDescription={project.data.shortDescription}
 >
-  <Nav />
-  <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
-    <ProjectHero title={project.data.title} image={project.data.image} />
-    <div class="max-w-5xl mx-auto space-y-10 md:py-28 pb-14">
-      <div class="text-left space-y-5 lg:space-y-8">
+  <ProjectHero title={project.data.title} image={project.data.image} />
+  <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
+    <div class="max-w-5xl mx-auto gap-y-10 md:py-24 pb-14">
+      <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
         <div>
           <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
           <p class="text-zinc-400 mb-4">{project.data.role}</p>
@@ -42,7 +43,7 @@ const { Content } = await render(project);
 
         <div class="tech-stack">
           <h2 class="text-xl font-semibold mb-2">Tech Stack</h2>
-          <ul class="flex items-start justify-start space-x-3">
+          <ul class="flex items-start justify-start flex-wrap gap-3">
             {
               project.data.tech.map((tech) => (
                 <li class="badge badge-primary">{tech}</li>
@@ -51,7 +52,7 @@ const { Content } = await render(project);
           </ul>
         </div>
 
-        <ul class="flex items-center justify-start space-x-5">
+        <ul class="flex items-center justify-start gap-x-5">
           {
             project.data.link && (
               <li>
@@ -96,7 +97,9 @@ const { Content } = await render(project);
           }
         </ul>
 
-        <a href="/#projects" class="btn btn-outline">← Back to projects</a>
+        <a href="/#projects" class="btn btn-outline w-auto shrink"
+          >← Back to projects</a
+        >
       </div>
     </div>
   </section>

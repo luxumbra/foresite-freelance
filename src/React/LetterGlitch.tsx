@@ -278,13 +278,10 @@ const LetterGlitch = ({
   }, [glitchSpeed, smooth]);
 
   return (
-    <div className="relative w-full h-full bg-[#101010] overflow-hidden z-0">
-      <canvas
-        ref={canvasRef}
-        className="block w-full h-full mask-[url(/svg/FRST.UK.svg)]"
-      />
+    <div className="glitch-wrapper relative w-full h-full bg-[var(--background)] mask-[url(/svg/FRST.UK.svg)] mask-center mask-no-repeat overflow-hidden z-0">
+      <canvas ref={canvasRef} className="block w-full h-full" />
       {outerVignette && (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(16,16,16,0)_30%,_rgba(16,16,16,1)_100%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(16,16,16,0)_30%,_rgba(16,16,16,0.7)_100%)]"></div>
       )}
       {centerVignette && (
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0)_60%)]"></div>

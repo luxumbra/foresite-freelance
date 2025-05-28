@@ -1,0 +1,18 @@
+@import "./typography.css";
+@import "tailwindcss";
+
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --background: #101010;
+  --sec: #a476ff;
+  --white: #dfdfdf;
+  --white-icon: #f3f3f398;
+  --white-icon-tr: #f3f3f310;
+}
+
+.glitch-wrapper {
+  mask-size: contain;
+  mask-repeat: repeat space;
+}

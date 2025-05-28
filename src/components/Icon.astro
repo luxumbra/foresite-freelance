@@ -6,7 +6,7 @@ import blockchainIcon from "~public/svg/blockchain.svg";
 import css3Icon from "~public/svg/CSS3.svg";
 import figmaIcon from "~public/svg/figma.svg";
 import gitIcon from "~public/svg/git.svg";
-import designIcon from "~public/svg/design.svg";
+import designIcon from "~public/svg/graphic-design.svg";
 import html5Icon from "~public/svg/html5.svg";
 import javascriptIcon from "~public/svg/javascript.svg";
 import mysqlIcon from "~public/svg/mysql.svg";
@@ -23,6 +23,7 @@ import vueIcon from "~public/svg/vue.svg";
 import wordpressIcon from "~public/svg/wordpress.svg";
 import viteIcon from "~public/svg/vite.svg";
 import githubIcon from "~public/svg/github.svg";
+import chakrauiIcon from "~public/svg/chakraui.svg";
 
 interface Props {
   name: string;
@@ -40,7 +41,7 @@ const icons = {
   css3: css3Icon,
   figma: figmaIcon,
   git: gitIcon,
-  design: designIcon,
+  "graphic-design": designIcon,
   html5: html5Icon,
   javascript: javascriptIcon,
   mysql: mysqlIcon,
@@ -57,6 +58,7 @@ const icons = {
   wordpress: wordpressIcon,
   vite: viteIcon,
   github: githubIcon,
+  chakraui: chakrauiIcon,
 };
 
 const Svg = icons[name.toLowerCase()] ?? null;

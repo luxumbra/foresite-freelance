@@ -1,16 +1,22 @@
 ---
+import { Picture } from "astro:assets";
 import { Image } from "astro:assets";
 
 const { title, image } = Astro.props;
 ---
 
 <section
-  class="relative flex flex-col items-center justify-center w-screen -translate-x-20 h-[66vh] bg-cover bg-center shadow-lg"
+  class="project-hero relative flex flex-col items-center justify-center w-screen -translate-x-9 md:-translate-x-48 lg:-translate-x-20 h-[75vh] bg-cover bg-center shadow-lg overflow-hidden"
 >
   <div class="absolute inset-0 bg-black opacity-20 z-10"></div>
   {
     image ? (
-      <Image src={image} alt={title} class="w-full h-full object-cover z-0" />
+      <Picture
+        src={image}
+        formats={["avif", "webp"]}
+        alt={title}
+        loading="lazy"
+      />
     ) : null
   }
 

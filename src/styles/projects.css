@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+  .project-hero {
+    picture {
+      @apply w-full h-full object-cover;
+    }
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+

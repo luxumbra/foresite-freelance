@@ -3,7 +3,7 @@
     "module": "ES2020",
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "types": ["astro/client"],
+    "types": ["astro/client", "react", "react-dom"],
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "baseUrl": ".",
@@ -16,8 +16,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": [
-    "src/**/*",
-    "astro.config.ts"
-  ]
+  "include": ["src/**/*", "astro.config.ts", "astro.config.mjs"]
 }

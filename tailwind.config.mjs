@@ -3,7 +3,7 @@ const typographyPlugin = require("@tailwindcss/typography");
 const daisyUI = require("daisyui");
 
 export default {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}"],
   theme: {
     extend: {
       keyframes: {

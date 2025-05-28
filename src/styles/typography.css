@@ -1,14 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 /**
   * Typography styles for the application.
   * This file contains custom styles for headings, paragraphs, and other text elements.
   */
 
-@layer components {
-
+@layer utilities {
   p a {
     @apply transition-colors duration-200;
   }
