@@ -10,4 +10,8 @@
   p a {
     @apply transition-colors duration-200;
   }
+
+  blockquote cite {
+    @apply text-secondary/70 font-light;
+  }
 }

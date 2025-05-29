@@ -20,6 +20,17 @@ const projects = defineCollection({
     }),
 });
 
+const testimonials = defineCollection({
+  loader: glob({ pattern: "**.*md", base: "./src/content/testimonials" }),
+  schema: () =>
+    z.object({
+      client: z.string(),
+      project: z.string(),
+      shortQuote: z.string().optional(),
+    }),
+});
+
 export const collections = {
   projects,
+  testimonials,
 };

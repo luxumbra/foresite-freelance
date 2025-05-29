@@ -2,10 +2,6 @@
 import LetterGlitch from "@/React/LetterGlitch.tsx";
 import LogoWall from "@components/LogoWall.astro";
 import SkillsList from "@/React/SkillsList.tsx";
-import { Icon } from "astro-icon/components";
-
-import frstMask from "@/assets/svg/frst-mask.png";
-import { Image } from "astro:assets";
 ---
 
 <section class="text-[var(--white)] mt-12 md:mt-0" id="home">
@@ -132,30 +128,4 @@ import { Image } from "astro:assets";
       </div>
     </div>
   </div>
-
-  <style is:global>
-    .shiny-sec {
-      background: linear-gradient(
-        135deg,
-        #a476ff 25%,
-        #eee5ff 50%,
-        #a476ff 75%
-      );
-      background-size: 400% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: shine 3s linear infinite;
-    }
-
-    @keyframes shine {
-      0% {
-        background-position: 100% 50%;
-      }
-      30%,
-      70% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
 </section>

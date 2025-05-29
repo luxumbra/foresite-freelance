@@ -1,7 +1,7 @@
 ---
 github: https://github.com/MetaFam/TheGame
 link: https://metagame.wtf
-role: Frontend Developer, Designer & Maintainer (OSS)
+role: Frontend Developer, Designer & Core Contributor (OSS)
 shortDescription: Contributed to the design and frontend development of MetaGame (MetaOS), a gamified Web3
   community focussed on Web3 onboarding and exploration into a new kind of socioeconimic system.
 
@@ -26,8 +26,10 @@ My contributions included improving layout, styling and accessibility across pag
 
 ![MetaGame](./metagame-dashboard.png)
 
-I was also a multisig signer for the DAO treasury and was responsible for the monthly 'payroll' process, called TheMint, where I'd run scripts to calculate how much of our token contributors earned based on their contributions, and then distribute the tokens to contributors' wallets. This process was crucial for maintaining the economic model of the community and ensuring fair compensation for contributors.
+Over the three years I was involved with MetaGame, I contributed to MetaGame's open-source ecosystem by supporting frontend code quality and consistency across community-contributed pull requests. As a GitHub org admin, I reviewed and merged PRs, particularly those affecting the UI, ensuring changes followed brand guidelines and semantic HTML practices. I helped maintain usability and design integrity by guiding contributors away from overly generic component usage and toward accessible, meaningful markup.
 
-The project was fully open-source and driven by a global contributor network (all corners of the world) but sadly, the project didn't make it, however many projects were spawned from it, by community members who went on to build their own Web3 projects. a number of the core team are now running dAcademy (Web3 onboarding & Education), NextMeta (Podcast & Newsletter) and MetaFest (Events & Conferences).
+I was also a multisig signer for the DAO treasury and was responsible for the monthly 'payroll' process, called TheMint, where I'd run scripts on the XP repository to calculate how much of our token contributors earned based on their contributions, and then distribute the tokens (between £1k - £50k) to contributors' wallets. This process was crucial for maintaining the economic model of the community and ensuring fair compensation for contributors.
+
+The project was fully open-source and driven by a global contributor network (all corners of the world) but sadly, the project didn't survive the long bear winter. However many projects were spawned from it, formed by community members who went on to build their own Web3 projects. A number of the core team are now running [dAcademy](https://dacade.my) (Web3 onboarding & Education), [NextMeta](https://metagame.substack.com/) (Podcast & Newsletter) and MetaFest (Events & Conferences).
 
 The wiki is still live if you'd like to learn more about the project: [MetaGame Wiki](https://wiki.metagame.wtf/)

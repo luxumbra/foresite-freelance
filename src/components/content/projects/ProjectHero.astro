@@ -6,7 +6,7 @@ const { title, image } = Astro.props;
 ---
 
 <section
-  class="project-hero relative flex flex-col items-center justify-center w-screen -translate-x-9 md:-translate-x-48 lg:-translate-x-20 h-[75vh] bg-cover bg-center shadow-lg overflow-hidden"
+  class="project-hero group relative flex flex-col items-center justify-center w-screen -translate-x-9 md:-translate-x-48 lg:-translate-x-20 h-[75vh] bg-cover bg-center shadow-lg overflow-hidden"
 >
   <div class="absolute inset-0 bg-black opacity-20 z-10"></div>
   {
@@ -24,9 +24,9 @@ const { title, image } = Astro.props;
     class="absolute inset-0 flex items-center justify-center z-10 text-center text-white"
   >
     <div
-      class="bg-black bg-opacity-70 p-4 rounded-lg shadow-[0_0_80px_-6px] shadow-purple-500"
+      class="group-hover:opacity-0 motion-safe:group-hover:scale-75 transition-all duration-300 bg-black bg-opacity-70 p-4 px-6 rounded-lg shadow-[0_0_80px_-6px] shadow-purple-500"
     >
-      <h1 class="text-3xl font-bold">{title}</h1>
+      <h1 class="text-3xl font-bold text-[var(--sec)] shiny-sec">{title}</h1>
     </div>
   </div>
 </section>

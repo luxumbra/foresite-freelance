@@ -32,11 +32,15 @@ const { Content } = await render(project);
     <div class="max-w-5xl mx-auto gap-y-8 py-0s md:py-14 lg:py-18 xl:py-24">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
         <div>
-          <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
-          <p class="text-zinc-400 mb-4">{project.data.role}</p>
+          <h2 class="text-3xl lg:text-6xl font-bold mb-2">
+            {project.data.title}
+          </h2>
+          <p class="text-[var(--sec)] font-light mb-4 text-2xl">
+            {project.data.role}
+          </p>
         </div>
         <div
-          class="prose md:prose-lg prose-headings:text-slate-300 prose-invert hover:prose-a:text-blue-400"
+          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-2xl lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80"
         >
           <Content />
         </div>
