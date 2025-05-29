@@ -12,7 +12,7 @@ const projects = defineCollection({
       shortDescription: z.string(),
       tech: z.array(z.string()),
       year: z.union([z.string(), z.number()]).optional(),
-      status: z.enum(["production", "development", "archived"]),
+      status: z.enum(["production", "development", "archived", "active"]),
       github: z.string().optional(),
       figma: z.string().optional(),
       link: z.string().optional(),

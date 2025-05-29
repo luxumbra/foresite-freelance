@@ -1,4 +1,8 @@
-export type ProjectStatus = "production" | "development" | "archived";
+export type ProjectStatus =
+  | "production"
+  | "development"
+  | "archived"
+  | "active";
 export type Project = {
   title: string;
   shortTitle?: string;

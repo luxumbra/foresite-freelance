@@ -54,6 +54,7 @@ const SkillsList = () => {
       "Single Page Applications (SPAs)",
       "Landing pages and business websites",
       "Portfolio websites",
+      "Web3 integration: NFTs, Crypto payments, etc",
     ],
     "Mobile Development": [
       "Mobile-friendly web apps",

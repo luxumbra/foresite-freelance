@@ -2,7 +2,7 @@
 role: Creator, Maker & Designer
 shortDescription: Branding and business cards designed for my sustainable crafting business, Bough & Burrow.
 slug: 'boughandburrow'
-status: production
+status: active
 tech:
 - Figma
 - Canva

@@ -29,14 +29,14 @@ const { Content } = await render(project);
 >
   <ProjectHero title={project.data.title} image={project.data.image} />
   <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
-    <div class="max-w-5xl mx-auto gap-y-10 md:py-24 pb-14">
+    <div class="max-w-5xl mx-auto gap-y-8 py-0s md:py-14 lg:py-18 xl:py-24">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
         <div>
           <h1 class="text-3xl font-bold mb-2">{project.data.title}</h1>
           <p class="text-zinc-400 mb-4">{project.data.role}</p>
         </div>
         <div
-          class="prose prose-lg prose-headings:text-slate-300 prose-invert hover:prose-a:text-blue-400"
+          class="prose md:prose-lg prose-headings:text-slate-300 prose-invert hover:prose-a:text-blue-400"
         >
           <Content />
         </div>
