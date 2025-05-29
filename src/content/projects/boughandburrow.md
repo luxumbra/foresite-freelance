@@ -1,6 +1,6 @@
 ---
 role: Creator, Maker & Designer
-shortDescription: Branding and business cards designed for my sustainable crafting business, Bough & Burrow.
+shortDescription: Brand identity, website design, print collateral, and product photography for a handmade eco-craft business I founded. This project showcases my ability to create a consistent, warm, and sustainable brand experience across digital and physical mediums.
 slug: 'boughandburrow'
 status: active
 tech:
@@ -31,3 +31,5 @@ I also had a custom branding iron made with my logo so i can brand my products.
 Aaaand, I just ordered some merch; Two t-shirt designs and a hoody. One design has a QR code that gives the user 15% off in my etsy store.
 
 ![Merchandise](./bghbrrw-merch.jpg)
+
+[Bough & Burrow on Etsy](https://bghbrrw.uk/etsy) (15% off store wide). Email <a href="mailto:hello@boughandburrow.uk">hello@boughandburrow.uk</a> for more info.
