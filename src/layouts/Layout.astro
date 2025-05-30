@@ -65,7 +65,7 @@ const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
 
     <title>{title}</title>
   </head>
-  <body class="bg-[var(--background)] md:px-48 lg:px-20 px-9">
+  <body class="bg-[var(--background)] lg:px-20 px-9">
     <Nav />
     <slot />
     <Footer />
@@ -84,12 +84,31 @@ const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
     margin: 0;
   }
 
-  .shiny-sec {
+  .shiny-sec,
+  .group:hover .shiny-sec-hover {
     background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
     background-size: 400% 100%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: shine 3s linear infinite;
+  }
+
+  .group .badge.shiny-sec-hover {
+    transition: all 0.3s ease-in-out;
+  }
+  .group:hover .badge.shiny-sec-hover {
+    background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
+    background-size: 400% 100%;
+    animation: shine 3s linear infinite;
+    color: #fff;
+  }
+  .shiny-sec-icon {
+    background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    fill: transparent;
     animation: shine 3s linear infinite;
   }
 
@@ -103,6 +122,30 @@ const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
     }
   }
 
+  @keyframes bounce-smooth {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-8px);
+    }
+    40% {
+      transform: translateY(0);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .bounce-smooth {
+    animation: bounce-smooth 2s ease-out infinite;
+  }
   *::selection {
     background-color: var(--sec);
     color: var(--background);

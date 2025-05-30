@@ -77,7 +77,7 @@ const SkillsList = () => {
   };
 
   return (
-    <div className="text-left pt-3 md:pt-9">
+    <div className="text-left pt-3 md:pt-9 w-full">
       <h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
         What I do?
       </h3>
