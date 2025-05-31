@@ -29,24 +29,35 @@ const { Content } = await render(project);
 >
   <ProjectHero title={project.data.title} image={project.data.image} />
   <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
-    <div class="max-w-5xl mx-auto gap-y-8 py-0s md:py-14 lg:py-18 xl:py-24">
+    <div class="max-w-5xl mx-auto gap-y-8 py-6 lg:py-24 xl:py-28">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
-        <div>
-          <h2 class="text-3xl lg:text-6xl font-bold mb-2">
+        <div class="relative">
+          <h1 class="text-3xl lg:text-4xl xl:text-5xl mb-2">
             {project.data.title}
-          </h2>
-          <p class="text-[var(--sec)] font-light mb-4 text-2xl">
-            {project.data.role}
-          </p>
+          </h1>
+          <ul class="list-none flex items-start justify-start gap-5">
+            <li class="text-white/70 font-light mb-4 text-xl capitalize">
+              <span class="sr-only">Role:</span>
+              {project.data.role}
+            </li>
+            <li
+              class="absolute -top-2.5 left-2.5 xl:-top-3.5 xl:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base xl:text-xl w-full capitalize"
+            >
+              <span class="sr-only">Industry:</span>
+              {project.data.industry}
+            </li>
+          </ul>
         </div>
         <div
-          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-2xl lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80"
+          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-xl lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 prose-img:w-full prose-img:h-auto"
         >
           <Content />
         </div>
 
         <div class="tech-stack">
-          <h2 class="text-xl font-semibold mb-2">Tech Stack</h2>
+          <h2 class="text-xl lg:text-2xl font-semibold mb-5 capitalize">
+            Technology used
+          </h2>
           <ul class="flex items-start justify-start flex-wrap gap-3">
             {
               project.data.tech.map((tech) => (

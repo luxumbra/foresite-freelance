@@ -2,6 +2,7 @@
 github: https://github.com/luxumbra/mf-irl-astro
 link: https://frst.uk/metafest
 role: Full Stack Developer
+industry: Web3 Events & Conferences
 shortDescription: 'Event site for MetaFest: Croatia, built with Astro and Tailwind.
   Integrated Google Calendar syncing, dual payment systems (crypto + card), and real-time
   updates via a custom backend.'

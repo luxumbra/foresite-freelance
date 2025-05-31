@@ -8,6 +8,7 @@ export type Project = {
   shortTitle?: string;
   slug: string;
   role: string;
+  industry?: string;
   shortDescription: string;
   description: string;
   image?: ImageMetadata;

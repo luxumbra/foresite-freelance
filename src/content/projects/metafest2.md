@@ -1,6 +1,7 @@
 ---
 github: https://github.com/MetaFam/MetaFest2
 role: Designer & Developer
+industry: Web3 Events & Conferences
 shortDescription: 'Event site for MetaFest2, built with NextJS, React Three Fiber and ChakraUI.
   Integrated Google Calendar syncing, booking, and full 3D experience with animated features and easter eggs.'
 slug: 'metafest2'

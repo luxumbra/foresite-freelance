@@ -6,7 +6,7 @@
     }
 
     img {
-      @apply w-full h-full object-cover object-bottom-right;
+      @apply w-full h-full object-cover object-center lg:object-center;
     }
   }
 
