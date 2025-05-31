@@ -14,7 +14,8 @@ tech:
 - API
 - Vercel
 - Git
-title: 'MetaFest2'
+title: 'MetaFest2 Conference Website'
+shortTitle: MetaFest2
 image: ./metafest2.png
 year: 2022
 ---

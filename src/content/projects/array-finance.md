@@ -1,6 +1,7 @@
 ---
 github: https://github.com/luxumbra/array-finance-website
 role: Frontend Developer
+industry: Decentralised Finance
 shortDescription: Landing site for a DeFi protocol with fast-loading static pages.
 slug: 'array-finance'
 status: archived
