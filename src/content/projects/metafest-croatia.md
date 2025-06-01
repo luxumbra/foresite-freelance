@@ -23,8 +23,12 @@ image: ./metafest-croatia.png
 year: 2023
 ---
 
-Built and deployed the official website for MetaFest: Croatia, a Web3 community event hosted by MetaGame DAO. The site was developed using Astro and TailwindCSS, and optimised for speed and clarity with static site generation.
+Built and deployed the official website for MetaFest: Croatia, a Web3 community event hosted by MetaGame DAO in Pula, Croatia. The site was developed using AstroJS, TailwindCSS, with selective use of Node.js and React Three Fiber. Optimised for speed, it leveraged Astro's built-in image optimisation and multiple image formats, producing statically generated pages that load instantly for users, unlike server- or client-rendered content generated on the fly.
 
-To support a dynamic and evolving schedule, I integrated the Google Calendar API via a custom Node.js backend, hosted securely on an encrypted remote server and managed with PM2. The backend fetched updated schedule data every minute, automatically triggering a rebuild and redeploy of the static frontend, ensuring attendees always saw the most up-to-date speaker and event information.
+To support a dynamic and evolving schedule, I integrated the Google Calendar API via a custom Node.js backend, hosted securely on an encrypted remote server and managed with PM2. The backend fetched updated schedule data every minute, automatically triggering a rebuild and redeploy of the static frontend. This approach kept the site fully up-to-date, stayed within deployment allowances, and ensured attendees always had the latest speaker and event information.
 
-The site also featured dual-mode ecommerce integration: attendees could purchase tickets via a Croatian card processor or using crypto through a wallet connection. Both flows were designed to offer a consistent and user-friendly experience, regardless of payment method.
+The beautiful site was designed by Trolleo who works as a craft beer packaging designer. During the build we needed to add in a number if featurs not included in the original designs so I took on the task of designing them within the bounds of the original design.
+
+
+
+The site also featured dual-mode e-commerce integration: attendees could purchase tickets either via a Croatian card processor or with crypto through a Web3 wallet connection. Both flows were designed to deliver a consistent, user-friendly experience across payment methods.
