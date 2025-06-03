@@ -5,6 +5,8 @@ import bashIcon from "~public/svg/bash.svg";
 import blockchainIcon from "~public/svg/blockchain.svg";
 import css3Icon from "~public/svg/CSS3.svg";
 import figmaIcon from "~public/svg/figma.svg";
+import figjamIcon from "~public/svg/figjam.svg";
+import thirdwebIcon from "~public/svg/thirdweb.svg";
 import gitIcon from "~public/svg/git.svg";
 import designIcon from "~public/svg/graphic-design.svg";
 import html5Icon from "~public/svg/html5.svg";
@@ -19,11 +21,14 @@ import supabaseIcon from "~public/svg/supabase.svg";
 import tailwindcssIcon from "~public/svg/tailwindcss.svg";
 import typescriptIcon from "~public/svg/typescript.svg";
 import vercelIcon from "~public/svg/vercel.svg";
+import netlifyIcon from "~public/svg/netlify.svg";
 import vueIcon from "~public/svg/vue.svg";
 import wordpressIcon from "~public/svg/wordpress.svg";
 import viteIcon from "~public/svg/vite.svg";
 import githubIcon from "~public/svg/github.svg";
 import chakrauiIcon from "~public/svg/chakraui.svg";
+import frstIcon from "~public/svg/FRST.UK.svg";
+import r3fIcon from "~public/svg/threejs.svg";
 
 interface Props {
   name: string;
@@ -40,6 +45,7 @@ const icons = {
   blockchain: blockchainIcon,
   css3: css3Icon,
   figma: figmaIcon,
+  figjam: figjamIcon,
   git: gitIcon,
   "graphic-design": designIcon,
   html5: html5Icon,
@@ -57,8 +63,12 @@ const icons = {
   vue: vueIcon,
   wordpress: wordpressIcon,
   vite: viteIcon,
+  thirdweb: thirdwebIcon,
+  netlify: netlifyIcon,
   github: githubIcon,
   chakraui: chakrauiIcon,
+  frstuk: frstIcon,
+  r3f: r3fIcon,
 };
 
 const Svg = icons[name.toLowerCase()] ?? null;
@@ -69,9 +79,5 @@ const Svg = icons[name.toLowerCase()] ?? null;
     <div class={`inline-flex items-center justify-center ${wrapperClass}`}>
       <Svg class={svgClass} />
     </div>
-  ) : (
-    <div class={`inline-block ${wrapperClass} text-red-500`}>
-      [Icon not found]
-    </div>
-  )
+  ) : null
 }

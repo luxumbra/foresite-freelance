@@ -11,8 +11,8 @@ tech:
 - TypeScript
 - TailwindCSS
 - ThirdWeb
+- Web3 / Blockchain
 - Vercel
-- Figma
 title: Meta-Builders Website
 shortTitle: Meta-Builders
 image: ./meta-builders-3d.png

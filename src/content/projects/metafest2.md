@@ -8,12 +8,13 @@ slug: 'metafest2'
 status: archived
 tech:
 - NextJS
-- React Three Fiber
 - ChakraUI
 - Web3 / Blockchain
 - API
+- React Three Fiber
 - Vercel
 - Git
+- Figma
 title: 'MetaFest2 Conference Website'
 shortTitle: MetaFest2
 image: ./metafest2.png

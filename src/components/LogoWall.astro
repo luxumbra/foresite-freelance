@@ -1,79 +1,199 @@
 ---
+import type { Technology, LogoWall } from "@/data/technologies";
 import Icon from "./Icon.astro";
+import { undefined } from "astro:schema";
 
-const technologies = [
-  { name: "css3", label: "CSS3" },
-  { name: "html5", label: "HTML5" },
-  { name: "javascript", label: "JavaScript" },
-  {
-    label: "TypeScript",
-    name: "typescript",
-  },
-  {
-    label: "React",
-    name: "react",
-  },
-  {
-    label: "Astro",
-    name: "astro",
-  },
-  { name: "nextjs", label: "Next.js" },
-  {
-    label: "Wordpress",
-    name: "wordpress",
-  },
-  {
-    label: "PHP",
-    name: "php",
-  },
-  {
-    label: "TailwindCSS",
-    name: "tailwindcss",
-  },
-  {
-    label: "ChakraUI",
-    name: "chakraui",
-  },
-  { name: "supabase", label: "Supabase" },
-  {
-    label: "Blockchain",
-    name: "blockchain",
-  },
-  { name: "api", label: "APIs" },
-  { name: "git", label: "Git" },
-  { name: "bash", label: "Bash" },
-  { name: "graphic-design", label: "Graphic Design" },
-  {
-    label: "Figma",
-    name: "figma",
-  },
-];
+const { size, tech, slider } = Astro.props as LogoWall;
+
+const wrapperClasses = (size: LogoWall["size"]) => {
+  let classname = "";
+  switch (size) {
+    case "small":
+      classname = "py-0";
+      break;
+    case "medium":
+      classname = "py-4";
+      break;
+    case "large":
+      classname = "py-8";
+      break;
+    default:
+      classname = "py-4";
+      break;
+  }
+  return classname;
+};
+const innerClasses = (size: LogoWall["size"]) => {
+  let classname = "";
+  switch (size) {
+    case "small":
+      classname = "w-full";
+      break;
+    case "medium":
+      classname = "w-24";
+      break;
+    case "large":
+      classname = "w-32";
+      break;
+    default:
+      classname = "w-16";
+      break;
+  }
+  return classname;
+};
+
+const sliderPadding = (size: LogoWall["size"]) => {
+  let classname = "";
+
+  switch (size) {
+    case "small":
+      classname = "gap-6 flex-wrap gap-y-4 md:gap-6 md:flex-nowrap";
+      break;
+    case "medium":
+      classname = "gap-8 gap-y-4 md:gap-8 flex-wrap flex-row md:gap-y-4";
+      break;
+    case "large":
+      classname = "gap-12 md:gap-20 w-max";
+      break;
+    default:
+      classname = "gap-6 md:gap-8";
+      break;
+  }
+  return classname;
+};
+
+const itemGap = (size: LogoWall["size"]) => {
+  let classname = "";
+  switch (size) {
+    case "small":
+      classname = "gap-1";
+      break;
+    default:
+      classname = "gap-2";
+      break;
+  }
+  return classname;
+};
+
+const fontSize = (size: LogoWall["size"]) => {
+  let classname = "";
+
+  switch (size) {
+    case "small":
+      classname = "text-sm";
+      break;
+    case "medium":
+      classname = "text-base";
+      break;
+    case "large":
+      classname = "text-lg";
+      break;
+    default:
+      classname = "text-lg";
+      break;
+  }
+  return classname;
+};
+const svgSize = (size: LogoWall["size"]) => {
+  let classname = "";
+
+  switch (size) {
+    case "small":
+      classname = "w-4";
+      break;
+    case "medium":
+      classname = "w-6";
+      break;
+    case "large":
+      classname = "w-8";
+      break;
+    default:
+      classname = "w-8";
+      break;
+  }
+  return classname;
+};
+const resultsLimit = (size: LogoWall["size"]) => {
+  let limit: number;
+  switch (size) {
+    case "small":
+      limit = 6;
+      break;
+    case "medium":
+      limit = 100;
+      break;
+    case "large":
+      limit = 100;
+      break;
+    default:
+      limit = 100;
+      break;
+  }
+
+  return limit;
+};
+const techList =
+  size == "large"
+    ? [...tech, ...tech, ...tech]
+    : size == "medium"
+      ? tech
+      : tech;
+
+console.log(techList);
 ---
 
-<div class="relative overflow-x-hidden py-8">
+<div class:list={["relative overflow-x-hidden", wrapperClasses(size)]}>
   <div
-    class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"
+    class:list={[
+      "pointer-events-none absolute inset-y-0 left-0 bg-gradient-to-r from-[var(--background)] to-transparent z-20",
+      size == "small" || size == "medium" ? "to-5%" : "to-100%",
+      innerClasses(size),
+    ]}
   >
   </div>
   <div
-    class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"
+    class:list={[
+      "pointer-events-none absolute inset-y-0 right-0 bg-gradient-to-l from-[var(--background)] to-transparent z-20",
+      size == "small" ? "to-5%" : "to-100%",
+      innerClasses(size),
+    ]}
   >
   </div>
 
-  <div class="flex animate-scroll hover:animate-paused gap-12 md:gap-20 w-max">
+  <div
+    class:list={[
+      "flex",
+      slider ? "animate-scroll hover:animate-paused" : "",
+      sliderPadding(size),
+    ]}
+  >
     {
-      [...technologies, ...technologies, ...technologies].map((tech) => (
-        <div class="flex items-center justify-start gap-2 group transition-all duration-300">
-          <Icon
-            name={tech.name}
-            wrapperClass="object-cover transition-transform group-hover:scale-110 opacity-60 flex-shrink"
-            svgClass="h-auto w-8 fill-slate-400"
-          />
-          <span class="text-lg font-medium text-[var(--white-icon)]">
-            {tech.label}
-          </span>
-        </div>
-      ))
+      techList.map((tech, i) => {
+        if (i >= resultsLimit(size)) return null;
+
+        return (
+          <div
+            class:list={[
+              "flex items-center justify-start group transition-all duration-300",
+              itemGap(size),
+            ]}
+          >
+            <Icon
+              name={tech.name ? tech.name : "FRST.UK"}
+              wrapperClass="object-cover transition-transform group-hover:scale-110 opacity-60 flex-shrink"
+              svgClass={`h-auto ${svgSize(size)} fill-slate-400`}
+            />
+            <span
+              class:list={[
+                "font-medium text-[var(--white-icon)]",
+                fontSize(size),
+              ]}
+            >
+              {tech.label}
+            </span>
+          </div>
+        );
+      })
     }
   </div>
 </div>

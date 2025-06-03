@@ -11,11 +11,11 @@ image: ./metagame.png
 status: archived
 tech:
 - React
-- Typescript
+- TypeScript
 - ChakraUI
-- Github
+- Web3 / Blockchain
+- Git
 - Figma
-- Web3
 title: MetaGame Website & App
 shortTitle: MetaGame
 year: 2020 - 2023

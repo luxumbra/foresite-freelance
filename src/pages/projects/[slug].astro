@@ -8,6 +8,8 @@ import { getCollection } from "astro:content";
 import { render } from "astro:content";
 
 import "@/styles/projects.css";
+import LogoWall from "@/components/LogoWall.astro";
+import { technologies, Technology } from "@/data/technologies";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -20,6 +22,13 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
+
+const techLogos = project.data.tech.flatMap((label: string) => {
+  const found = technologies.find((t) => t.label === label);
+  console.log({ found });
+
+  return found ? [found] : [];
+});
 ---
 
 <Layout
@@ -36,11 +45,15 @@ const { Content } = await render(project);
             {project.data.title}
           </h1>
           <ul
-            class="list-none flex grow w-full items-start justify-start gap-5 z-0"
+            class="list-none flex flex-col grow w-full items-start justify-start gap-0 z-0"
           >
             <li
-              class="text-[var(--sec)]/70 font-light mb-4 text-xl md:text-base xl:text-xl capitalize md:absolute md:-top-2.5 md:right-2.5 xl:-top-3.5 xl:right-3.5 order-3 md:order-none"
+              class="text-[var(--sec)]/70 font-light mb-4 text-base xl:text-xl md:text-base xl:text-xl capitalize absolute -top-7 right-3.5 md:-top-2.5 md:right-2.5 xl:-top-3.5 xl:right-3.5 order-3 md:order-none w-auto"
             >
+              <div
+                class="bg-gradient-to-l from-0% to-5% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+              >
+              </div>
               <span class="sr-only">Date(s):</span>
               {project.data.year}
             </li>
@@ -48,16 +61,24 @@ const { Content } = await render(project);
               <span class="sr-only">Role:</span>
               {project.data.role}
             </li>
+            <li class="text-white/70 font-light mb-4 text-xl capitalize">
+              <span class="sr-only">Technology used:</span>
+              <LogoWall tech={techLogos} size="small" />
+            </li>
             <li
-              class="absolute -top-2.5 left-2.5 xl:-top-3.5 xl:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base xl:text-xl w-full capitalize"
+              class="absolute -top-2.5 left-2.5 xl:-top-3.5 xl:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base xl:text-xl w-auto capitalize"
             >
+              <div
+                class="bg-gradient-to-r from-0% to-5% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+              >
+              </div>
               <span class="sr-only">Industry:</span>
               {project.data.industry}
             </li>
           </ul>
         </div>
         <div
-          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-xl lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 prose-img:w-full prose-img:h-auto"
+          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-lg lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 prose-img:w-full prose-img:h-auto"
         >
           <Content />
         </div>
@@ -66,23 +87,24 @@ const { Content } = await render(project);
           <h2 class="text-xl lg:text-2xl font-semibold mb-5 capitalize">
             Technology used
           </h2>
-          <ul class="flex items-start justify-start flex-wrap gap-3">
+          <LogoWall tech={techLogos} size="medium" />
+          <!-- <ul class="flex items-start justify-start flex-wrap gap-3">
             {
               project.data.tech.map((tech) => (
                 <li class="badge badge-primary">{tech}</li>
               ))
             }
-          </ul>
+          </ul> -->
         </div>
 
-        <ul class="flex items-center justify-start gap-x-5">
+        <ul class="flex items-center justify-start flex-wrap gap-x-5 gap-y-3">
           {
             project.data.link && (
               <li>
                 <a
                   href={project.data.link}
                   target="_blank"
-                  class="underline transition-colors duration-200 hover:text-blue-400 inline-flex items-center gap-x-1"
+                  class="underline transition-colors duration-200 inline-flex items-center gap-x-1"
                 >
                   <Icon name="mdi:web" /> View Website{" "}
                   {/* <Icon name="mdi:external-link" /> */}
@@ -96,7 +118,7 @@ const { Content } = await render(project);
                 <a
                   href={project.data.github}
                   target="_blank"
-                  class="underline transition-colors duration-200 hover:text-blue-400  inline-flex items-center gap-x-1"
+                  class="underline transition-colors duration-200 inline-flex items-center gap-x-1"
                 >
                   <Icon name="mdi:github" /> View on GitHub{" "}
                   {/* <Icon name="mdi:external-link" /> */}
