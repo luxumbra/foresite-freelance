@@ -52,7 +52,20 @@
         </div>
       </div>
 
-      <div class="flex flex-col items-center space-y-6">
+      <div class="flex flex-col items-center space-y-6"></div>
+
+      <div class="flex flex-col items-center lg:items-start space-y-6">
+        <!-- <div class="w-full max-w-xs">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1FoNWAbjZMER47?utm_source=generator&theme=0"
+            title="Spotify Embed of my top music in 2024"
+            style="border-radius:12px; border:0; background:var(--background);"
+            class="w-full h-40"
+            height="152"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div> -->
         <div class="grid grid-cols-1 gap-3 w-full max-w-xs py-6">
           {
             [
@@ -75,7 +88,7 @@
                 alt: "Netlify Logo",
               },
             ].map((tech) => (
-              <div class="flex items-center justify-center lg:justify-normal space-x-3">
+              <div class="flex items-center justify-center lg:justify-end space-x-3">
                 <span class="text-[var(--white-icon)] text-sm">
                   {tech.desc}
                 </span>
@@ -91,20 +104,6 @@
               </div>
             ))
           }
-        </div>
-      </div>
-
-      <div class="flex flex-col items-center lg:items-start space-y-6">
-        <div class="w-full max-w-xs">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/37i9dQZF1FoNWAbjZMER47?utm_source=generator&theme=0"
-            title="Spotify Embed of my top music in 2024"
-            style="border-radius:12px; border:0; background:var(--background);"
-            class="w-full h-40"
-            height="152"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
         </div>
       </div>
     </div>
