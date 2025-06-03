@@ -25,7 +25,6 @@ const { Content } = await render(project);
 
 const techLogos = project.data.tech.flatMap((label: string) => {
   const found = technologies.find((t) => t.label === label);
-  console.log({ found });
 
   return found ? [found] : [];
 });

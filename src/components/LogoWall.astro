@@ -1,7 +1,6 @@
 ---
 import type { Technology, LogoWall } from "@/data/technologies";
 import Icon from "./Icon.astro";
-import { undefined } from "astro:schema";
 
 const { size, tech, slider } = Astro.props as LogoWall;
 
@@ -138,8 +137,6 @@ const techList =
     : size == "medium"
       ? tech
       : tech;
-
-console.log(techList);
 ---
 
 <div class:list={["relative overflow-x-hidden", wrapperClasses(size)]}>
