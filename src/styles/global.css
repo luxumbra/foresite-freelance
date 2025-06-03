@@ -16,3 +16,7 @@
   mask-size: contain;
   mask-repeat: repeat space;
 }
+
+abbr:hover {
+  @apply cursor-help
+}

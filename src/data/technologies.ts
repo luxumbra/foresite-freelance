@@ -48,6 +48,7 @@ const technologies: Technology[] = [
   { name: "api", label: "API" },
   { name: "git", label: "Git" },
   { name: "bash", label: "Bash" },
+  { name: "nodejs", label: "NodeJS" },
   { name: "graphic-design", label: "Graphic Design" },
   {
     label: "Figma",
@@ -80,6 +81,30 @@ const technologies: Technology[] = [
   {
     label: "ThirdWeb",
     name: "thirdweb",
+  },
+  {
+    label: "Docusaurus",
+    name: "docusaurus",
+  },
+  {
+    label: "Gatsby",
+    name: "gatsby",
+  },
+  {
+    label: "Markdown",
+    name: "markdown",
+  },
+  {
+    label: "Canva",
+    name: "canva",
+  },
+  {
+    label: "ThemeUI",
+    name: "themeui",
+  },
+  {
+    label: "React Spring",
+    name: "spring",
   },
 ];
 

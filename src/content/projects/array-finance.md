@@ -7,10 +7,12 @@ slug: 'array-finance'
 status: archived
 tech:
 - Gatsby
-- React
 - ThemeUI
+- HTML5
+- CSS3
+- React
+- Web3 / Blockchain
 - React Spring
-- Blockchain
 - Netlify
 title: Array Finance
 image: ./array-finance.jpg

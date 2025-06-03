@@ -29,6 +29,12 @@ import githubIcon from "~public/svg/github.svg";
 import chakrauiIcon from "~public/svg/chakraui.svg";
 import frstIcon from "~public/svg/FRST.UK.svg";
 import r3fIcon from "~public/svg/threejs.svg";
+import docusaurusIcon from "~public/svg/docusaurus.svg";
+import gatsbyIcon from "~public/svg/gatsby.svg";
+import markdownIcon from "~public/svg/markdown.svg";
+import canvaIcon from "~public/svg/canva.svg";
+import fleekIcon from "~public/svg/fleek.svg";
+import springIcon from "~public/svg/spring.svg";
 
 interface Props {
   name: string;
@@ -69,6 +75,12 @@ const icons = {
   chakraui: chakrauiIcon,
   frstuk: frstIcon,
   r3f: r3fIcon,
+  docusaurus: docusaurusIcon,
+  gatsby: gatsbyIcon,
+  markdown: markdownIcon,
+  canva: canvaIcon,
+  fleek: fleekIcon,
+  spring: springIcon,
 };
 
 const Svg = icons[name.toLowerCase()] ?? null;

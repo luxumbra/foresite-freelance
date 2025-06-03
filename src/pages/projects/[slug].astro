@@ -36,39 +36,45 @@ const techLogos = project.data.tech.flatMap((label: string) => {
   ogDescription={project.data.shortDescription}
 >
   <ProjectHero title={project.data.title} image={project.data.image} />
-  <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
+  <section id="projects" class="text-[var(--white)] mt-16 lg:mt-0" id="home">
     <div class="max-w-5xl mx-auto gap-y-8 py-6 lg:py-24 xl:py-28">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
         <div class="relative shrink self-start grow-0">
-          <h1 class="relative text-3xl lg:text-4xl xl:text-5xl mb-2 z-10">
+          <h1 class="relative text-3xl lg:text-5xl mb-2 z-10">
             {project.data.title}
           </h1>
           <ul
             class="list-none flex flex-col grow w-full items-start justify-start gap-0 z-0"
           >
             <li
-              class="text-[var(--sec)]/70 font-light mb-4 text-base xl:text-xl md:text-base xl:text-xl capitalize absolute -top-7 right-3.5 md:-top-2.5 md:right-2.5 xl:-top-3.5 xl:right-3.5 order-3 md:order-none w-auto"
+              class="text-[var(--sec)]/70 font-light mb-4 text-base lg:text-2xl capitalize absolute -top-7 right-3.5 md:-top-2.5 md:right-2.5 lg:-top-4 lg:right-3.5 order-3 md:order-none w-auto"
             >
               <div
-                class="bg-gradient-to-l from-0% to-5% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+                class="bg-gradient-to-t from-0% to-50% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
               >
               </div>
               <span class="sr-only">Date(s):</span>
               {project.data.year}
             </li>
-            <li class="text-white/70 font-light mb-4 text-xl capitalize">
+            <li
+              class="text-white/70 font-light mb-4 text-xl capitalize relative"
+            >
+              <div
+                class="bg-gradient-to-b from-0% to-50% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+              >
+              </div>
               <span class="sr-only">Role:</span>
               {project.data.role}
             </li>
             <li class="text-white/70 font-light mb-4 text-xl capitalize">
-              <span class="sr-only">Technology used:</span>
+              <span class="sr-only">Technology & Skills used:</span>
               <LogoWall tech={techLogos} size="small" />
             </li>
             <li
-              class="absolute -top-2.5 left-2.5 xl:-top-3.5 xl:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base xl:text-xl w-auto capitalize"
+              class="absolute -top-2.5 left-2.5 lg:-top-4 lg:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base lg:text-2xl w-auto capitalize"
             >
               <div
-                class="bg-gradient-to-r from-0% to-5% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+                class="bg-gradient-to-t from-0% to-50% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
               >
               </div>
               <span class="sr-only">Industry:</span>
@@ -77,14 +83,16 @@ const techLogos = project.data.tech.flatMap((label: string) => {
           </ul>
         </div>
         <div
-          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-lg lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 prose-img:w-full prose-img:h-auto"
+          class="prose md:prose-lg lg:prose-xl prose-p:first-of-type:text-lg lg:prose-p:first-of-type:text-2xl prose-headings:text-slate-300 prose-headings:font-medium prose-invert prose-a:hover:text-blue-400 prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 prose-img:w-full prose-img:h-auto"
         >
           <Content />
         </div>
 
         <div class="tech-stack">
-          <h2 class="text-xl lg:text-2xl font-semibold mb-5 capitalize">
-            Technology used
+          <h2
+            class="text-xl lg:text-2xl font-semibold mb-5 capitalize text-slate-300"
+          >
+            Technology & Skills used
           </h2>
           <LogoWall tech={techLogos} size="medium" />
           <!-- <ul class="flex items-start justify-start flex-wrap gap-3">
