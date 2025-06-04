@@ -1,7 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import { Image } from "astro:assets";
 
 const { title, image } = Astro.props;
 ---
@@ -19,11 +17,11 @@ const { title, image } = Astro.props;
         src={image}
         formats={["avif", "webp"]}
         alt={title}
-        loading="lazy"
+        loading="eager"
       />
     ) : null
   }
-
+  <div id="hero-skeleton" class="skeleton absolute inset-0 -z-10"></div>
   <div
     class="absolute inset-0 flex items-center justify-center z-10 text-center text-white"
   >
@@ -33,12 +31,26 @@ const { title, image } = Astro.props;
       <span class="text-3xl font-bold text-[var(--sec)]">{title}</span>
     </div>
   </div>
-  <!-- <div
-    class="scroll-cta absolute inset-0 h-16 top-auto flex items-start justify-center"
-  >
-    <Icon
-      name="lineicons:scroll-down-2"
-      class="w-12 h-auto mx-auto bounce-smooth lg:hidden"
-    />
-  </div> -->
 </section>
+
+<script type="module" is:inline>
+  window.addEventListener("load", () => {
+    const img = document.querySelector(".project-hero picture img");
+    if (!img) return;
+
+    const hideSkeleton = () => {
+      const skeleton = document.getElementById("hero-skeleton");
+      if (skeleton) {
+        skeleton.style.opacity = "0";
+        skeleton.style.transition = "opacity 0.5s ease";
+        setTimeout(() => (skeleton.style.display = "none"), 500);
+      }
+    };
+
+    if (img.complete) {
+      hideSkeleton();
+    } else {
+      img.addEventListener("load", hideSkeleton);
+    }
+  });
+</script>
