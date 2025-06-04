@@ -15,6 +15,7 @@ const LetterGlitch = ({
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
+  const skeletonRef = useRef<HTMLDivElement | null>(null);
   const letters = useRef<
     {
       char: string;
@@ -121,7 +122,7 @@ const LetterGlitch = ({
   const interpolateColor = (
     start: { r: number; g: number; b: number },
     end: { r: number; g: number; b: number },
-    factor: number,
+    factor: number
   ) => {
     const result = {
       r: Math.round(start.r + (end.r - start.r) * factor),
@@ -170,6 +171,13 @@ const LetterGlitch = ({
     const { columns, rows } = calculateGrid(rect.width, rect.height);
     initializeLetters(columns, rows);
     drawLetters();
+    if (skeletonRef) {
+      console.log("skeletonRef exists, applying glitch effect");
+
+      skeletonRef.current.style.opacity = "0";
+      skeletonRef.current.style.transition = "opacity 0.5s ease";
+      setTimeout(() => (skeletonRef.current.style.display = "none"), 500);
+    }
   };
 
   const drawLetters = () => {
@@ -222,7 +230,7 @@ const LetterGlitch = ({
           letter.color = interpolateColor(
             startRgb,
             endRgb,
-            letter.colorProgress,
+            letter.colorProgress
           );
           needsRedraw = true;
         }
@@ -239,6 +247,7 @@ const LetterGlitch = ({
     if (now - lastGlitchTime.current >= glitchSpeed) {
       updateLetters();
       drawLetters();
+
       lastGlitchTime.current = now;
     }
 
@@ -278,14 +287,16 @@ const LetterGlitch = ({
   }, [glitchSpeed, smooth]);
 
   return (
-    <div className="glitch-wrapper relative w-full h-full bg-[var(--background)] mask-[url(/svg/FRST.UK.svg)] mask-center mask-no-repeat overflow-hidden z-0">
-      <canvas ref={canvasRef} className="block w-full h-full" />
+    <div className="glitch-wrapper relative w-full h-full bg-[var(--background)] mask mask-heart  overflow-hidden z-10">
+      <div className="absolute inset-0 z-20 bg-radial to-[var(--background)] from-transparent from-30% to-95%"></div>
+      <canvas ref={canvasRef} className="relative block w-full h-full z-0" />
       {outerVignette && (
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(16,16,16,0)_30%,_rgba(16,16,16,0.7)_100%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(16,16,16,0)_30%,_rgba(16,16,16,1)_100%)]"></div>
       )}
       {centerVignette && (
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0)_60%)]"></div>
       )}
+      <div ref={skeletonRef} className="skeleton inset-0 absolute -z-10"></div>
     </div>
   );
 };
