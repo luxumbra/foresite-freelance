@@ -27,7 +27,9 @@ const testimonials = defineCollection({
     z.object({
       client: z.string(),
       project: z.string(),
+      slug: z.string().optional(),
       shortQuote: z.string().optional(),
+      display: z.boolean().default(false),
     }),
 });
 

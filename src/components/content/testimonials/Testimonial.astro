@@ -1,0 +1,29 @@
+---
+import { render } from "astro:content";
+import { AnimateTestimonial } from "@/React/AnimateElements";
+
+const { testimonial } = Astro.props;
+const { Content } = await render(testimonial);
+---
+
+<div
+  id={`${testimonial.data.slug ?? "slug"}-testimonial`}
+  class="testimonial prose prose-slate prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 flex flex-col items-start justify-start w-full z-100"
+>
+  <h2 class="text-2xl font-medium text-slate-300">Customer testimonial</h2>
+  <blockquote class="testimonial-content">
+    <Content />
+    <footer>
+      <cite>— {testimonial.data.client}, {testimonial.data.project}</cite>
+    </footer>
+  </blockquote>
+</div>
+<!-- <AnimateTestimonial client:load /> -->
+
+<noscript>
+  <style>
+    .testimonial {
+      position: relative !important;
+    }
+  </style>
+</noscript>

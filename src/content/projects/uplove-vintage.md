@@ -35,7 +35,4 @@ Produced visuals and layouts for merchandise including eco-friendly t-shirts & h
 ### Outcome
 The client now has a fully-formed brand identity that communicates both emotional warmth and environmental consciousness. The business cards and merchandise are being used at in-person vintage fair increasing brand recognition and customer engagement.
 
-> Working with Dave was such a fantastic experience! He completely captured the essence of Uplove Vintage in the logo, merch, and business cards he designed for me. The attention to detail and creativity exceeded expectations, and I’ve had so many compliments on the branding. I couldn’t be happier with the results!
-> -- <cite>Ria, Uplove Vintage</cite>
-
 You can check out Uplove's wonderful vintage items in thier Etsy store [https://uplovevintage.etsy.com](https://uplovevintage.etsy.com) or say Hi on their socials--search UploveVintage on Insta or Facebook.

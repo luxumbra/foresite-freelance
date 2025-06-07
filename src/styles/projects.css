@@ -11,3 +11,11 @@
   }
 
 
+  .testimonial{
+    /* @apply  ; */
+  }
+  .no-js .testimonial {
+    @apply w-full border-0 max-w-full p-0 bg-transparent;
+  }
+
+

@@ -21,6 +21,24 @@
   li a:hover {
       @apply text-blue-500;
   }
+
+  blockquote {
+    @apply relative border-l-4 border-white p-6 my-6 rounded-lg;
+
+  }
+  blockquote p:first-of-type {
+    @apply overflow-visible;
+    &::before {
+      content: '“';
+      @apply absolute text-9xl scale-150 top-5 -z-10 text-secondary/20 font-extrabold align-text-bottom;
+    }
+  }
+  blockquote p:last-of-type {
+    &::after {
+      @apply hidden;
+
+    }
+  }
   blockquote cite {
     @apply text-secondary/70 font-light;
   }

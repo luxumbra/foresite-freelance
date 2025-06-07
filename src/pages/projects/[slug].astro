@@ -1,26 +1,32 @@
 ---
-import Nav from "@/components/Nav.astro";
 import Layout from "@/layouts/Layout.astro";
 
-import { Icon } from "astro-icon/components";
 import ProjectHero from "@/components/content/projects/ProjectHero.astro";
-import { getCollection } from "astro:content";
-import { render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import { getCollection, render } from "astro:content";
 
-import "@/styles/projects.css";
+import Testimonial from "@/components/content/testimonials/Testimonial.astro";
 import LogoWall from "@/components/LogoWall.astro";
-import { technologies, Technology } from "@/data/technologies";
+import { technologies } from "@/data/technologies";
+import { AnimateTitleSection } from "@/React/AnimateElements";
+import "@/styles/projects.css";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
+  const testimonials = await getCollection("testimonials");
 
-  return projects.map((project) => ({
-    params: { slug: project.data.slug },
-    props: { project },
-  }));
+  return projects.map((project) => {
+    const testimonial = testimonials.find(
+      (t) => t.data.slug === project.data.slug
+    );
+    return {
+      params: { slug: project.data.slug },
+      props: { project, testimonial: testimonial ?? null },
+    };
+  });
 }
 
-const { project } = Astro.props;
+const { project, testimonial } = Astro.props;
 const { Content } = await render(project);
 
 const techLogos = project.data.tech.flatMap((label: string) => {
@@ -39,13 +45,23 @@ const techLogos = project.data.tech.flatMap((label: string) => {
   <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
     <div class="max-w-5xl mx-auto gap-y-8 py-6 lg:py-24 xl:py-28">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
-        <div class="relative shrink self-start grow-0">
+        <div class="project-header fouc relative shrink self-start grow-0">
           <h1 class="relative text-3xl lg:text-5xl mb-2 z-10">
             {project.data.title}
           </h1>
           <ul
-            class="list-none flex flex-col grow w-full items-start justify-start gap-0 z-0"
+            class="project-meta list-none flex flex-col grow w-full items-start justify-start gap-0 z-0"
           >
+            <li
+              class="absolute -top-2.5 left-2.5 lg:-top-4 lg:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base lg:text-2xl w-auto capitalize"
+            >
+              <div
+                class="bg-gradient-to-t from-0% to-50% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
+              >
+              </div>
+              <span class="sr-only">Industry:</span>
+              {project.data.industry}
+            </li>
             <li
               class="text-[var(--sec)]/70 font-light mb-4 text-base lg:text-2xl capitalize absolute -top-7 right-3.5 md:-top-2.5 md:right-2.5 lg:-top-4 lg:right-3.5 order-3 md:order-none w-auto"
             >
@@ -70,16 +86,6 @@ const techLogos = project.data.tech.flatMap((label: string) => {
               <span class="sr-only">Technology & Skills used:</span>
               <LogoWall tech={techLogos} size="small" />
             </li>
-            <li
-              class="absolute -top-2.5 left-2.5 lg:-top-4 lg:left-3.5 text-[var(--sec)]/60 font-light mb-4 text-base lg:text-2xl w-auto capitalize"
-            >
-              <div
-                class="bg-gradient-to-t from-0% to-50% from-[var(--background)] to-transparent w-full absolute inset-0 z-0"
-              >
-              </div>
-              <span class="sr-only">Industry:</span>
-              {project.data.industry}
-            </li>
           </ul>
         </div>
         <div
@@ -87,7 +93,7 @@ const techLogos = project.data.tech.flatMap((label: string) => {
         >
           <Content />
         </div>
-
+        {testimonial && <Testimonial testimonial={testimonial} />}
         <div class="tech-stack">
           <h2
             class="text-xl lg:text-2xl font-semibold mb-5 capitalize text-slate-300"
@@ -155,4 +161,5 @@ const techLogos = project.data.tech.flatMap((label: string) => {
       </div>
     </div>
   </section>
+  <AnimateTitleSection client:load />
 </Layout>
