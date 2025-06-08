@@ -9,24 +9,24 @@ interface Props {
   title: string;
   ogTitle?: string;
   ogDescription?: string;
-  ogKeywords?: string;
+  keywords?: string;
   ogImage?: string;
   ogUrl?: string;
 }
 
-const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
-  Astro.props;
+const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content={ogDescription || "Web Developer & Designer"}
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content={keywords || "web, developer, designer"} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta
       property="og:title"
@@ -38,7 +38,7 @@ const { title, ogTitle, ogDescription, ogImage, ogKeywords, ogUrl } =
     />
     <meta
       property="og:image"
-      content={ogImage || "https://web.frst.uk/og.image.png"}
+      content={ogImage || "https://web.frst.uk/og.img.png"}
     />
     <meta property="og:url" content={ogUrl || "https://web.frst.uk"} />
     <meta property="og:type" content="website" />

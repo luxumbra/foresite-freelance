@@ -11,6 +11,8 @@ const projects = defineCollection({
       role: z.string(),
       industry: z.string().optional(),
       shortDescription: z.string(),
+      ogDescription: z.string().optional(),
+      keywords: z.string().optional(),
       tech: z.array(z.string()),
       year: z.union([z.string(), z.number()]).optional(),
       status: z.enum(["production", "development", "archived", "active"]),

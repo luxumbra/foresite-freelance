@@ -6,6 +6,7 @@ industry: Web3 Events & Conferences
 shortDescription: 'Event site for MetaFest: Croatia, built with Astro and Tailwind.
   Integrated Google Calendar syncing, dual payment systems (crypto + card), and real-time
   updates via a custom backend.'
+keywords: MetaFest, Croatia, Web3, AstroJS, TailwindCSS, TypeScript, NodeJS, Google Calendar API, PM2, Fleek, Web3 Payments, Crypto Payments
 slug: 'metafest-croatia'
 status: archived
 tech:

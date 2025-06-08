@@ -81,11 +81,11 @@ const SkillsList = () => {
       "Branding & identity design",
       "Business cards, social media graphics, merchandise",
     ],
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
-    ],
+    // "UI/UX Design & Prototyping": [
+    //   "UI design with Figma & Canva",
+    //   "UX research & improvements",
+    //   "Prototyping for websites & mobile apps",
+    // ],
     "Web Admin & Maintenance": [
       "Domain name registration & email set up -- you@yourbizname.co.uk",
       "Content updates - from old school FTP to CMS, Wordpress and continuous delivery",
