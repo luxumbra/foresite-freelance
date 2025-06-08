@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
+import TestimonialSlider from "./content/testimonials/TestimonialSlider.astro";
 
 const testimonials = await getCollection("testimonials");
 ---
@@ -14,44 +15,5 @@ const testimonials = await getCollection("testimonials");
   >
   </div>
 
-  <div class="grid justify-evenly hover:animate-paused gap-12 md:gap-20">
-    {
-      [...testimonials, ...testimonials, ...testimonials].map((testimonial) => {
-        return (
-          <div class="flex items-center justify-start gap-2 group transition-all duration-300">
-            <span>
-              {testimonial.data.shortQuote ? (
-                testimonial.data.shortQuote
-              ) : (
-                <fragment set:html={testimonial.body} />
-              )}
-            </span>
-            <span class="text-lg font-medium text-[var(--white-icon)]">
-              {testimonial.data.client}, {testimonial.data.project}
-            </span>
-          </div>
-        );
-      })
-    }
-  </div>
+  <TestimonialSlider testimonials={testimonials} />
 </div>
-
-<style is:global>
-  @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  .animate-scroll {
-    animation: scroll 30s linear infinite;
-  }
-
-  @media (min-width: 768px) {
-    .animate-scroll {
-      animation-duration: 50s;
-    }
-  }
-</style>

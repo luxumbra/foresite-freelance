@@ -6,6 +6,7 @@ type LogoWall = {
   size: "large" | "medium" | "small";
   tech: Technology[];
   slider?: boolean;
+
 };
 const technologies: Technology[] = [
   { name: "css3", label: "CSS3" },

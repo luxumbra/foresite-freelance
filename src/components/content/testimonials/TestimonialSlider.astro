@@ -1,0 +1,35 @@
+---
+import Testimonial from "./Testimonial.astro";
+
+const { testimonials } = Astro.props;
+---
+
+<div
+  class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4 border-2"
+>
+  {
+    testimonials.map((testimonial) => (
+      <div class="carousel-item">
+        <Testimonial testimonial={testimonial} />
+      </div>
+    ))
+  }
+  <!-- <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExample"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
+</div>

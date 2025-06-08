@@ -45,7 +45,7 @@ const techLogos = project.data.tech.flatMap((label: string) => {
   <section class="text-[var(--white)] mt-16 lg:mt-0" id="home">
     <div class="max-w-5xl mx-auto gap-y-8 py-6 lg:py-24 xl:py-28">
       <div class="flex flex-col text-left gap-y-5 lg:gap-y-8">
-        <div class="project-header fouc relative shrink self-start grow-0">
+        <div class="project-header fouc relative self-start w-full max-w-3xl">
           <h1 class="relative text-3xl lg:text-5xl mb-2 z-10">
             {project.data.title}
           </h1>
@@ -93,7 +93,7 @@ const techLogos = project.data.tech.flatMap((label: string) => {
         >
           <Content />
         </div>
-        {testimonial && <Testimonial testimonial={testimonial} />}
+        {testimonial && <Testimonial testimonial={testimonial} standalone />}
         <div class="tech-stack">
           <h2
             class="text-xl lg:text-2xl font-semibold mb-5 capitalize text-slate-300"
