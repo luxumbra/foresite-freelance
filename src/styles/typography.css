@@ -27,10 +27,11 @@
 
   }
   blockquote p:first-of-type {
-    @apply overflow-visible;
+    @apply overflow-visible relative;
+
     &::before {
       content: '“';
-      @apply absolute text-9xl scale-150 top-5 -z-10 text-secondary/20 font-extrabold align-text-bottom;
+      @apply inline-block absolute text-9xl scale-150 transform-none min-w-8 top-5 left-2 -z-10 text-secondary/20 font-extrabold align-text-bottom;
     }
   }
   blockquote p:last-of-type {

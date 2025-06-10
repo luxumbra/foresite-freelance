@@ -2,15 +2,15 @@
 import { render } from "astro:content";
 import { AnimateTestimonial } from "@/React/AnimateElements";
 
-const { testimonial, standalone } = Astro.props;
+const { testimonial, standalone, index } = Astro.props;
 const { Content } = await render(testimonial);
 ---
 
 <div
   id={`${testimonial.data.slug ?? "slug"}-testimonial`}
   class:list={[
-    "testimonial prose prose-slate prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-1 prose-blockquote:border-secondary prose-blockquote:text-white/80 flex flex-col items-start justify-start w-full z-100",
-    standalone ? "w-full" : "max-w-xs",
+    "testimonial prose prose-slate prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-0 prose-blockquote:border-secondary prose-blockquote:text-white/80 flex flex-col items-start justify-start w-full",
+    standalone ? "w-full" : "max-w-xl",
   ]}
 >
   {

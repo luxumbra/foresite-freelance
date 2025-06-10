@@ -1,35 +1,60 @@
 ---
 import Testimonial from "./Testimonial.astro";
+import "@/styles/slider.css";
 
 const { testimonials } = Astro.props;
 ---
 
-<div
-  class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4 border-2"
->
-  {
-    testimonials.map((testimonial) => (
-      <div class="carousel-item">
-        <Testimonial testimonial={testimonial} />
-      </div>
-    ))
-  }
-  <!-- <button
-    class="carousel-control-prev"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="prev"
-  >
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-bs-target="#carouselExample"
-    data-bs-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> -->
-</div>
+<section id="testimonials">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {
+        testimonials.map((t, i) => {
+          if (t.data.display === false) return null;
+
+          return (
+            <div class="swiper-slide">
+              <Testimonial testimonial={t} index={i} />
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: false,
+    loop: true,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      // when window width is >= 640px
+      1900: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
+</script>

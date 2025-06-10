@@ -13,7 +13,7 @@ function AnimateTitles(): void {
       console.warn("No titles found to animate");
       return;
     }
-    console.log("Animating titles with GSAP");
+
     titles.forEach((title, index) => {
       tl.from(title, {
         scrollTrigger: {
@@ -162,7 +162,6 @@ function AnimateNavItems(): void {
       return;
     }
 
-    console.log("Animating navigation items with GSAP");
     tl.from(foucElement, {
       autoAlpha: 0,
       duration: 0.5,

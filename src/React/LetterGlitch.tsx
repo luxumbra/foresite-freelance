@@ -172,8 +172,6 @@ const LetterGlitch = ({
     initializeLetters(columns, rows);
     drawLetters();
     if (skeletonRef) {
-      console.log("skeletonRef exists, applying glitch effect");
-
       skeletonRef.current.style.opacity = "0";
       skeletonRef.current.style.transition = "opacity 0.5s ease";
       setTimeout(() => (skeletonRef.current.style.display = "none"), 500);
