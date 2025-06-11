@@ -96,10 +96,16 @@ const techLogos = project.data.tech.flatMap((label: string) => {
         >
           <Content />
         </div>
-        {testimonial && <Testimonial testimonial={testimonial} standalone />}
-        <div class="tech-stack">
+
+        {
+          testimonial && testimonial.data.display && (
+            <Testimonial testimonial={testimonial} standalone />
+          )
+        }
+
+        <div class="tech-stack mt-14">
           <h2
-            class="text-xl lg:text-2xl font-semibold mb-5 capitalize text-slate-300"
+            class="text-xl md:text-3xl 2xl:text-4xl font-medium mb-5 capitalize text-slate-300"
           >
             Technology & Skills used
           </h2>

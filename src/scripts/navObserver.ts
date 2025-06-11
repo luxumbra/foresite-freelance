@@ -39,7 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (isHomePage) {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("nav a[href*='#']");
-    const observerOptions = { threshold: 0.2 };
+    const observerOptions = {
+      rootMargin: "0px 0px 25% 0px",
+      threshold: 0.2,
+    };
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {

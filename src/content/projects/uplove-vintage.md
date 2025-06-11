@@ -17,22 +17,22 @@ Uplove Vintage is a small independent seller specialising in curated vintage gla
 
 I worked closely with the founder, Ria, to deliver a cohesive and evocative visual identity that reflects the brand’s core message of love for vintage and sustainability.
 
-### Deliverables
-#### Logo Design
+## Deliverables
+### Logo Design
 Developed a custom logo combining elegant script typography with a heart-shaped recycle motif, symbolising the ‘uplove’ philosophy—restoring and reloving vintage pieces with care.
 
-#### Business Card Design
+### Business Card Design
 Designed multiple versions of double-sided business cards, each featuring a rich, deep green palette and gold-accented typography to evoke a sense of heritage and elegance. The cards include contact details, social handles, and a custom definition of the coined term “Uplove” for memorable branding.
 
 ![Business card variants](./uplove-bizcards-variants.jpg)
 
-#### Domain Name and Email
+### Domain Name and Email
 Registered the uplovevintage.co.uk domain (as a reseller) for them and configured the domain to use encrypted, privacy focussed [Proton Mail](https://proton.me/business) for on-brand email addresses.
 
-#### Merch Concepts
+### Merch Concepts
 Produced visuals and layouts for merchandise including eco-friendly t-shirts & hoodies and future packaging labels, tote bags, and thank-you cards, all maintaining brand consistency and supporting the upcycled aesthetic.
 
-### Outcome
+## Outcome
 The client now has a fully-formed brand identity that communicates both emotional warmth and environmental consciousness. The business cards and merchandise are being used at in-person vintage fair increasing brand recognition and customer engagement.
 
 You can check out Uplove's wonderful vintage items in thier Etsy store [https://uplovevintage.etsy.com](https://uplovevintage.etsy.com) or say Hi on their socials--search UploveVintage on Insta or Facebook.

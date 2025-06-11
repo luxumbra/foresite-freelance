@@ -28,15 +28,15 @@ I contributed to frontend development and design for several key areas, includin
 
 ![MetaGame Onboarding Game](./metagame-onboarding-montage.png)
 
-### Frontend Development & Design
+## Frontend Development & Design
 My contributions included improving layout, styling and accessibility across pages, refactoring React components, and helping maintain visual consistency. I also worked on the dashboard, the onboarding game and collaborated with other contributors on content structure and was the maintainer on the MetaGame wiki. The dashboard was a modular, user-friendly interface for community members to track their contributions, achievements, community calendar and progress within the MetaGame ecosystem.
 
 ![MetaGame](./metagame-dashboard.png)
 
-### Code Reviews & Open Source Maintenance
+## Code Reviews & Open Source Maintenance
 Over the three years I was involved with MetaGame, I contributed to thier open-source ecosystem by supporting frontend code quality and consistency across community-contributed pull requests. As a GitHub org admin, I reviewed and merged PRs, particularly those affecting the UI, ensuring changes followed brand guidelines and semantic HTML practices. I helped maintain usability and design integrity by guiding contributors away from overly generic component usage and toward accessible, meaningful markup.
 
-### DAO Treasury Management
+## DAO Treasury Management
 I was also a multisig signer for the DAO treasury and was responsible for the monthly 'payroll' process, called TheMint, where I'd run scripts on the XP repository to calculate how much of our token contributors earned based on their contributions, and then distribute the project's tokens to contributors' wallets. This process was crucial for maintaining the economic model of the community and ensuring fair compensation for contributors.
 
 ## Project Legacy

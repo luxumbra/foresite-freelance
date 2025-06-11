@@ -9,13 +9,15 @@ const { Content } = await render(testimonial);
 <div
   id={`${testimonial.data.slug ?? "slug"}-testimonial`}
   class:list={[
-    "testimonial prose prose-slate prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg prose-blockquote:border-l-0 prose-blockquote:border-secondary prose-blockquote:text-white/80 flex flex-col items-start justify-start w-full",
-    standalone ? "w-full" : "max-w-xl",
+    "testimonial prose prose-slate prose-blockquote:font-light prose-blockquote:prose-p:first-of-type:text-base lg:prose-blockquote:prose-p:first-of-type:text-lg  prose-blockquote:border-secondary prose-blockquote:border-l-0 prose-blockquote:text-white/80 flex flex-col items-start justify-start w-full",
+    standalone ? "w-full prose-blockquote:border-l-1 mt-14" : "max-w-xl",
   ]}
 >
   {
     standalone && (
-      <h2 class="text-2xl font-medium text-slate-300">Customer testimonial</h2>
+      <h2 class="text-xl md:text-3xl 2xl:text-4xl font-medium text-slate-300">
+        Customer testimonial
+      </h2>
     )
   }
   <blockquote class="testimonial-content">
