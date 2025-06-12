@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const scrollProgress = Math.min(window.scrollY / maxScroll, 1);
       const easeProgress = 1 - Math.pow(1 - scrollProgress, 4);
 
-      const minWidth = 528;
+      const minWidth = 360;
       const maxWidth = window.innerWidth * 0.8;
       const currentWidth = maxWidth - (maxWidth - minWidth) * easeProgress;
 
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { passive: true }
   );
 
-  // 🔐 Only run IntersectionObserver on homepage
   const isHomePage = window.location.pathname === "/";
   if (isHomePage) {
     const sections = document.querySelectorAll("section[id]");
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sections.forEach((section) => observer.observe(section));
   }
 
-  // Smooth scrolling logic (homepage only)
   const navLinks = document.querySelectorAll("nav a[href*='#']");
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");

@@ -27,3 +27,24 @@
     @apply text-white;
   }
 }
+.swipe {
+  animation: bounceSwipe 2s infinite;
+  @apply absolute left-1/2 translate-x-1/2 bottom-9 origin-center transition-all  opacity-80 cursor-pointer;
+
+  &:hover {
+    @apply bg-white/20;
+  }
+}
+
+@keyframes bounceSwipe {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(15deg);
+  }
+
+  100% {
+    transform: rotateZ(-15deg);
+  }
+}

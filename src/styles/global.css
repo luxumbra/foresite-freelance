@@ -20,3 +20,7 @@
 abbr:hover {
   @apply cursor-help
 }
+
+/* div {
+  @apply outline-1 outline-red-600;
+} */

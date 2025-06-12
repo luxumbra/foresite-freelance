@@ -38,12 +38,16 @@ if (!project) {
       class="flex items-center justify-between space-y-3 lg:space-y-5 px-3 w-full"
     >
       <div class="flex flex-col">
-        <h3 class="text-2xl font-semibold text-white shiny-sec-hover">
+        <h3
+          class="text-lg xl:text-2xl font-semibold text-white shiny-sec-hover"
+        >
           <a href={`/projects/${project.slug}`}
             >{!project.shortTitle ? project.title : project.shortTitle}</a
           >
         </h3>
-        <p class="wrap wrap-normal shiny-sec-hover">{project.role}</p>
+        <p class="text-sm lg:text-lg wrap wrap-normal shiny-sec-hover">
+          {project.role}
+        </p>
         <span
           class="py-1 text-sm text-[var(--white-icon)] capitalize shiny-sec-hover"
         >
@@ -59,7 +63,7 @@ if (!project) {
               href={project.github}
               aria-label="GitHub"
               title="GitHub Repository"
-              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+              class="size-10 xl:size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-2 xl:p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
             >
               <Icon name="mdi:github" class="size-7" />
             </a>
@@ -72,7 +76,7 @@ if (!project) {
               href={project.figma}
               aria-label="Figma"
               title="Figma Design"
-              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)] object-fill"
+              class="size-10 xl:size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border-1 border-[var(--white-icon-tr)] p-2 xl:p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)] object-fill"
             >
               <Icon name="lineicons:figma" class="size-7" />
             </a>
@@ -85,7 +89,7 @@ if (!project) {
               href={project.link}
               aria-label="Preview"
               title="View Project"
-              class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+              class="size-10 xl:size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border-1 border-[var(--white-icon-tr)] p-2 xl:p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
             >
               <Icon name="mdi:web" class="size-7" />
             </a>

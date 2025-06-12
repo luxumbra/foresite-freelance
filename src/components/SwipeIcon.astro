@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<Icon
+  name="mdi:gesture-swipe"
+  class="swipe-icon absolute left-1/2 translate-x-1/2 bottom-9 origin-center transition-all opacity-80 cursor-pointer size-12 group-hover:opacity-0 duration-300 ease-in"
+/>
+
+<script>
+  import { swipeIconAnimation } from "@/scripts/animations/testimonial-slider";
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", () => {
+      swipeIconAnimation();
+    });
+  }
+</script>

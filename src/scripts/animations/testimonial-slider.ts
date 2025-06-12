@@ -5,7 +5,7 @@ import InertiaPlugin from "gsap/InertiaPlugin";
 
 gsap.registerPlugin(Draggable, InertiaPlugin);
 
-function testimonialSliderScript() {
+function testimonialSliderScript(): void {
   if (typeof window === "undefined") return;
   const wrapper = document.getElementById("testimonial-wrapper");
   const track = document.getElementById("testimonial-track");
@@ -128,4 +128,15 @@ function testimonialSliderScript() {
   }
 }
 
-export { testimonialSliderScript };
+/**
+ * WIP Function to handle swipe icon animation, rotating from left to right and bouncing using gsap
+ * @returns {void}
+ */
+function swipeIconAnimation(): void {
+  const swipeIcon = document.querySelector(".swipe-icon");
+  if (!swipeIcon) return;
+
+  // WIP
+}
+
+export { swipeIconAnimation, testimonialSliderScript };

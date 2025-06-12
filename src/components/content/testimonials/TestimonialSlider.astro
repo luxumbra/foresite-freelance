@@ -1,11 +1,13 @@
 ---
+import { Icon } from "astro-icon/components";
 import Testimonial from "./Testimonial.astro";
 import "@/styles/slider.css";
+import SwipeIcon from "@/components/SwipeIcon.astro";
 
 const { testimonials } = Astro.props;
 ---
 
-<section id="testimonials">
+<div class="relative group">
   <div class="swiper">
     <div class="swiper-wrapper">
       {
@@ -21,7 +23,8 @@ const { testimonials } = Astro.props;
       }
     </div>
   </div>
-</section>
+  <SwipeIcon />
+</div>
 
 <script>
   import Swiper from "swiper";
