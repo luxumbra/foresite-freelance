@@ -22,8 +22,16 @@ const { testimonials } = Astro.props;
         })
       }
     </div>
+
+    <div class="swiper-button-next">
+      <Icon name="mdi:chevron-right" />
+    </div>
+    <div class="swiper-button-prev">
+      <Icon name="mdi:chevron-left" />
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
-  <SwipeIcon />
+  <!-- <SwipeIcon /> -->
 </div>
 
 <script>
@@ -31,6 +39,11 @@ const { testimonials } = Astro.props;
   import "swiper/css";
   import "swiper/css/navigation";
   import "swiper/css/pagination";
+  import { Navigation, Pagination } from "swiper/modules";
+
+  if (typeof window === "undefined") {
+    throw new Error("This component requires a browser environment.");
+  }
 
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
@@ -56,8 +69,14 @@ const { testimonials } = Astro.props;
         spaceBetween: 20,
       },
     },
-    autoplay: {
-      delay: 5000,
+    modules: [Navigation, Pagination],
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 </script>

@@ -16,12 +16,12 @@
   @apply bg-white/70 transition-all duration-300;
 
   &.swiper-pagination-bullet-active {
-    @apply bg-white scale-110;
+    @apply bg-[--primary] scale-110;
   }
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  @apply text-white/70 transition-all duration-300 z-30;
+  @apply text-white/70 transition-all duration-300 z-100;
 
   &:hover {
     @apply text-white;

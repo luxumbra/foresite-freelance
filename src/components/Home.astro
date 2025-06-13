@@ -3,9 +3,16 @@ import LetterGlitch from "@/React/LetterGlitch.tsx";
 import LogoWall from "@components/LogoWall.astro";
 import SkillsList from "@/React/SkillsList.tsx";
 import { technologies } from "@/data/technologies";
+import { Image } from "astro:assets";
+
+import treeScene from "@/assets/svg/gonk-hazel-scene.svg?raw";
+import { Icon } from "astro-icon/components";
 ---
 
-<section class="text-[var(--white)] mt-12 md:mt-0 scroll-m-20" id="home">
+<section
+  class="relative text-[var(--white)] mt-12 md:mt-0 scroll-m-20 pb-[8vh]"
+  id="home"
+>
   <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
     <div class="text-left space-y-4">
       <p class="text-md md:text-lg text-[var(--white-icon)] shiny-white">
@@ -130,4 +137,5 @@ import { technologies } from "@/data/technologies";
       </div>
     </div>
   </div>
+  <!-- <Icon name="gonk-hazel-scene" class="absolute inset-0 size-full" /> -->
 </section>
