@@ -17,7 +17,7 @@ tech:
 - Figma
 title: 'MetaFest2 Conference Website'
 shortTitle: MetaFest2
-image: ./metafest2.png
+image: https://cdn.frst.uk/static/projects/metafest2.png
 year: 2022
 ---
 

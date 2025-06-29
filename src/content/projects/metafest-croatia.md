@@ -20,7 +20,7 @@ tech:
 - PM2
 - Git
 title: 'MetaFest: Croatia'
-image: ./metafest-croatia.png
+image: https://cdn.frst.uk/static/projects/metafest-croatia.png
 year: 2023
 ---
 
@@ -30,7 +30,7 @@ Optimised for speed, the website leveraged Astro's built-in image optimisation a
 
 To support a dynamic and evolving schedule, I integrated the Google Calendar API via a custom Node.js backend, hosted securely on an encrypted remote server and managed with PM2. The backend fetched updated schedule data every minute, automatically triggering a rebuild and redeploy of the static frontend. This approach kept the site fully up-to-date, stayed within deployment allowances, and ensured attendees always had the latest speaker and event information.
 
-![MetaFest: Croatia Montage](./metafest-croatia-montage.png)
+<!-- ![MetaFest: Croatia Montage](https://cdn.frst.uk/static/projects/metafest-croatia-montage.png) -->
 
 The beautiful site was designed by Trolleo who works as a craft beer packaging designer. During the build we needed to add in a number of features not included in the original designs so I took on the task of designing them within the bounds of the original design.
 

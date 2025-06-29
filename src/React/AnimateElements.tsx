@@ -122,7 +122,7 @@ function AnimateTitleSection(): void {
     ScrollTrigger.create({
       trigger: sectionTitle,
       start: "top 80%",
-      end: "top 20%",
+      end: "top 5%",
       onLeave: () => tl.reverse(),
       onEnterBack: () => tl.play(),
     });
@@ -181,8 +181,55 @@ function AnimateNavItems(): void {
   return null; // No content rendered — just enhancement
 }
 
+function AnimateSwipeIcon(): void {
+  useGSAP(() => {
+    // console.clear();
+    const tl = gsap.timeline();
+    const icon = document.querySelector(".swipe-icon");
+    const swiper = document.querySelector(".swiper");
+    if (!icon || !swiper) {
+      console.warn("Elements not found to animate");
+      return;
+    }
+
+    tl.from(icon, {
+      scrollTrigger: {
+        trigger: icon,
+        start: "top 80%",
+        end: "bottom 50%",
+        scrub: true,
+      },
+      x: 0,
+      translateX: "100%",
+      y: 50,
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0,
+    });
+    // swiper.addEventListener("mouseover", () => {
+    //   gsap.fromTo(
+    //     icon,
+    //     {
+    //       rotate: 10,
+    //       duration: 0.5,
+    //       ease: "power3.out",
+    //     },
+    //     {
+    //       rotate: -10,
+    //       duration: 0.5,
+    //       ease: "power3.out",
+    //     }
+    //   );
+    // });
+  }, {});
+  return null; // No content rendered — just enhancement
+}
+
 export {
   AnimateNavItems,
+  AnimateSwipeIcon,
   AnimateTestimonial,
   AnimateTitles,
   AnimateTitleSection,

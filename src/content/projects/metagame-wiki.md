@@ -14,7 +14,7 @@ tech:
 - JavaScript
 - Git
 title: MetaGame Wiki
-image: ./metagame-wiki.png
+image: https://cdn.frst.uk/static/projects/metagame-wiki.png
 year: 2020 - 2023
 ---
 

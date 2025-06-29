@@ -7,7 +7,7 @@ shortDescription: Contributed to the design and frontend development of MetaGame
   community focussed on Web3 onboarding and exploration into a new kind of socioeconimic system.
 
 slug: metagame
-image: ./metagame.png
+image: https://cdn.frst.uk/static/projects/metagame.png
 status: archived
 tech:
 - React
@@ -26,12 +26,12 @@ MetaGame is a decentralized Web3 community project that blended Web3 onboarding,
 ## My Role & Contributions
 I contributed to frontend development and design for several key areas, including the onboarding experience, visual style, and community tools. I was also a core contributor in the community for 3 years and made it to 3rd position on the leaderboard, based on my contributions to the application and the DAO community.
 
-![MetaGame Onboarding Game](./metagame-onboarding-montage.png)
+![MetaGame Onboarding Game](https://cdn.frst.uk/static/projects/metagame-onboarding-montage.png)
 
 ## Frontend Development & Design
 My contributions included improving layout, styling and accessibility across pages, refactoring React components, and helping maintain visual consistency. I also worked on the dashboard, the onboarding game and collaborated with other contributors on content structure and was the maintainer on the MetaGame wiki. The dashboard was a modular, user-friendly interface for community members to track their contributions, achievements, community calendar and progress within the MetaGame ecosystem.
 
-![MetaGame](./metagame-dashboard.png)
+![MetaGame](https://cdn.frst.uk/static/projects/metagame-dashboard.png)
 
 ## Code Reviews & Open Source Maintenance
 Over the three years I was involved with MetaGame, I contributed to thier open-source ecosystem by supporting frontend code quality and consistency across community-contributed pull requests. As a GitHub org admin, I reviewed and merged PRs, particularly those affecting the UI, ensuring changes followed brand guidelines and semantic HTML practices. I helped maintain usability and design integrity by guiding contributors away from overly generic component usage and toward accessible, meaningful markup.

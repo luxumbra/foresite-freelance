@@ -8,7 +8,7 @@ shortDescription: UX and UI design for a gamified sustainability app targeting i
   Figma.
 slug: sustainability-app
 status: archived
-image: ./sustainability-app.png
+image: https://cdn.frst.uk/static/projects/sustainability-app.png
 tech:
 - Figma
 - FigJam
@@ -23,7 +23,7 @@ I was contracted to lead the UX and UI design for a sustainability-focused web a
 ## Design Process
 My role covered the entire design process, from early discovery through to a fully-developed design system, using Figma and FigJam throughout. I collaborated closely with stakeholders to map out user journeys tailored to different audience segments — from casual users looking to track personal impact, to enterprise users requiring detailed sustainability reporting.
 
-![Sustainability App montage of screens from the Figma designs](./sustainability-app-montage.png)
+![Sustainability App montage of screens from the Figma designs](https://cdn.frst.uk/static/projects/sustainability-app-montage.png)
 
 ## Key Deliverables
 

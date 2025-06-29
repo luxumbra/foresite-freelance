@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import type { Project } from "@/data/projects";
 import { Icon } from "astro-icon/components";
 const { project } = Astro.props as { project: Project };
@@ -16,10 +16,15 @@ if (!project) {
     >
       {
         project.image ? (
-          <Image
+          <Picture
             src={project.image}
             alt={project.title}
             class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300 z-0"
+            formats={["avif", "webp"]}
+            sizes="100vw"
+            loading="lazy"
+            decoding="async"
+            inferSize
           />
         ) : null
       }

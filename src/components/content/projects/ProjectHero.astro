@@ -20,6 +20,8 @@ const { title, image } = Astro.props;
         alt={title}
         loading="eager"
         decoding="async"
+        class="w-full h-full object-cover"
+        inferSize
       />
     ) : null
   }

@@ -21,12 +21,6 @@ function testimonialSliderScript(): void {
 
   var numSlides = slides.length;
 
-  gsap.set(slides, {
-    backgroundColor:
-      "random([red, blue, green, purple, orange, yellow, lime, pink])",
-    xPercent: (i) => i * 100,
-  });
-
   var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
   var timer = gsap.delayedCall(slideDelay, autoPlay);
 

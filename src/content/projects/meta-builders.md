@@ -15,7 +15,7 @@ tech:
 - Vercel
 title: Meta-Builders Website
 shortTitle: Meta-Builders
-image: ./meta-builders-3d.png
+image: https://cdn.frst.uk/static/projects/meta-builders-3d.png
 year: 2022
 ---
 
@@ -23,7 +23,7 @@ I led the design and development of the Meta-Builders website—a marketing plat
 
 The goal was to create a clean, modern, and responsive site that clearly conveyed the brand’s ethos and service offerings, while integrating Web3 functionality to support service purchases as NFTs.
 
-![The services page showing the service options in cards and the artwork of the NFTs displayed in one of them](./meta-builders-services.png)
+![The services page showing the service options in cards and the artwork of the NFTs displayed in one of them](https://cdn.frst.uk/static/projects/meta-builders-services.png)
 
 Built with Vite, React, TypeScript, ThirdWeb and TailwindCSS, the site delivers a fast and fluid user experience across all devices. It is deployed on Vercel for scalable performance. Blockchain functionality was implemented using opensource smart contracts and APIs, allowing users to mint and manage service-based <abbr title="Non-Fungible Token">NFT</abbr>s (Non-fungible tokens) directly on the Ethereum blockchain.
 

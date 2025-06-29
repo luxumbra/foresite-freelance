@@ -9,7 +9,7 @@ tech:
 - Gandi Domains
 - Print On Demand
 title: Uplove Vintage
-image: ./uplove-vintage.jpg
+image: https://cdn.frst.uk/static/projects/uplove-vintage.jpg
 year: 2023
 ---
 
@@ -24,7 +24,7 @@ Developed a custom logo combining elegant script typography with a heart-shaped 
 ### Business Card Design
 Designed multiple versions of double-sided business cards, each featuring a rich, deep green palette and gold-accented typography to evoke a sense of heritage and elegance. The cards include contact details, social handles, and a custom definition of the coined term “Uplove” for memorable branding.
 
-![Business card variants](./uplove-bizcards-variants.jpg)
+![Business card variants](https://cdn.frst.uk/static/projects/uplove-bizcards-variants.jpg)
 
 ### Domain Name and Email
 Registered the uplovevintage.co.uk domain (as a reseller) for them and configured the domain to use encrypted, privacy focussed [Proton Mail](https://proton.me/business) for on-brand email addresses.

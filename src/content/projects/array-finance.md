@@ -15,7 +15,7 @@ tech:
 - React Spring
 - Netlify
 title: Array Finance
-image: ./array-finance.jpg
+image: https://cdn.frst.uk/static/projects/array-finance.jpg
 year: 2021
 ---
 
