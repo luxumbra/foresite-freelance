@@ -8,7 +8,7 @@ shortDescription: UX and UI design for a gamified sustainability app targeting i
   Figma.
 slug: sustainability-app
 status: archived
-image: https://cdn.frst.uk/static/projects/sustainability-app.png
+image: ./images/sustainability-app.png
 tech:
 - Figma
 - FigJam
@@ -18,12 +18,12 @@ shortTitle: Sustainability App
 year: 2023
 ---
 
-I was contracted to lead the UX and UI design for a sustainability-focused web application aimed at helping both individuals and businesses make more eco-conscious decisions. The app’s concept centred around gamifying carbon reduction, encouraging users to engage with sustainability goals through clear incentives and actionable feedback.
+I was contracted to lead the UX and UI design for a sustainability-focused web application aimed at helping both individuals and businesses make more eco-conscious decisions. The app's concept centred around gamifying carbon reduction, encouraging users to engage with sustainability goals through clear incentives and actionable feedback.
 
 ## Design Process
 My role covered the entire design process, from early discovery through to a fully-developed design system, using Figma and FigJam throughout. I collaborated closely with stakeholders to map out user journeys tailored to different audience segments — from casual users looking to track personal impact, to enterprise users requiring detailed sustainability reporting.
 
-![Sustainability App montage of screens from the Figma designs](https://cdn.frst.uk/static/projects/sustainability-app-montage.png)
+![Sustainability App montage of screens from the Figma designs](./images/sustainability-app-montage.png)
 
 ## Key Deliverables
 
@@ -34,4 +34,4 @@ My role covered the entire design process, from early discovery through to a ful
 - To streamline the workflow and ensure maintainability, I created a reusable component library within Figma, which allowed for more efficient design updates and easier handoff to development.
 
 ## Outcome
-The interface was crafted to be clean, accessible, and highly usable, blending clear visual hierarchy with engaging illustrations (created by a collaborating designer) to support the app’s mission. Although the project ultimately did not move forward into development, a complete UX strategy, full visual design system, and developer-ready design assets were successfully delivered and prepared for potential future implementation.
+The interface was crafted to be clean, accessible, and highly usable, blending clear visual hierarchy with engaging illustrations (created by a collaborating designer) to support the app's mission. Although the project ultimately did not move forward into development, a complete UX strategy, full visual design system, and developer-ready design assets were successfully delivered and prepared for potential future implementation.

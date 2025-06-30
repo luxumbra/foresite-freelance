@@ -15,7 +15,7 @@ tech:
 - React Spring
 - Netlify
 title: Array Finance
-image: https://cdn.frst.uk/static/projects/array-finance.jpg
+image: ./images/array-finance.jpg
 year: 2021
 ---
 
@@ -24,10 +24,10 @@ Array Finance aimed to simplify DeFi investing by enabling users to create and i
 ### Scope of Work
 
 #### Site Build & Architecture
-Developed a 4-page static site using Gatsby to support Array’s early marketing efforts. Key sections included project overview, team, roadmap, and a community call-to-action. The CCO page had a little blockchain interaction as it showed the total funds received in the coin offering.
+Developed a 4-page static site using Gatsby to support Array's early marketing efforts. Key sections included project overview, team, roadmap, and a community call-to-action. The CCO page had a little blockchain interaction as it showed the total funds received in the coin offering.
 
 #### Component-Based Design
-Leveraged React and ThemeUI to implement a fully responsive, design-token-based layout aligned with the brand’s futuristic visual identity.
+Leveraged React and ThemeUI to implement a fully responsive, design-token-based layout aligned with the brand's futuristic visual identity.
 
 #### UX Enhancements
 Integrated React Spring for subtle animations and interactions, creating a polished and engaging user experience.
@@ -36,4 +36,4 @@ Integrated React Spring for subtle animations and interactions, creating a polis
 Deployed the site via Netlify, ensuring rapid load times and seamless performance across devices.
 
 ### Postscript
-Although Array Finance ultimately didn’t continue—reportedly due to a contract vulnerability—the project remains a strong example of delivering production-ready frontend assets in a lean, fast-moving Web3 environment.
+Although Array Finance ultimately didn't continue—reportedly due to a contract vulnerability—the project remains a strong example of delivering production-ready frontend assets in a lean, fast-moving Web3 environment.

@@ -15,13 +15,12 @@ const { title, image } = Astro.props;
     image ? (
       <Picture
         src={image}
-        formats={["avif", "webp"]}
+        formats={["jpg", "png", "avif", "webp"]}
         sizes="100vw"
         alt={title}
         loading="eager"
         decoding="async"
         class="w-full h-full object-cover"
-        inferSize
       />
     ) : null
   }
