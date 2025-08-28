@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "astro": "^5.7.13",
     "astro-icon": "^1.1.5",
-    "daisyui": "^5.0.38",
+    "daisyui": "^5.0.53",
     "firebase": "^11.7.3",
     "gsap": "^3.13.0",
     "ogl": "^1.0.11",
