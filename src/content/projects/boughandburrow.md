@@ -43,6 +43,6 @@ I've also designed some merch -- two t-shirt designs and a hoody. One design has
 
 ![Merchandise](./images/bghbrrw-merch.jpg)
 
-I am now working on [a website](https//boughandburrow.uk) for my business using NextJS and MedusaJS. The site will be a full e-commerce platform using Stripe for payment processing. Initially hosting the site using a combination of Vercel and Railway, I have now moved to self hosting on a Hetzner VPS, deployed via Github Actions and Dokploy (Open Source, self-hosted Vercel-like SaaS). Just a few things to finish and it'll be live in a few days. 😊
+I am now working on [a website](https://boughandburrow.uk) for my business using NextJS and MedusaJS. The site will be a full e-commerce platform using Stripe for payment processing. Initially hosting the site using a combination of Vercel and Railway, I have now moved to self hosting on a Hetzner VPS, deployed via Github Actions and Dokploy (Open Source, self-hosted Vercel-like SaaS). Just a few things to finish and it'll be live in a few days. 😊
 
 [Bough & Burrow on Etsy](https://bghbrrw.uk/etsy) (15% off store wide). Email <a href="mailto:hello@boughandburrow.uk">hello@boughandburrow.uk</a> for more info.

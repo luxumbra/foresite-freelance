@@ -66,6 +66,14 @@ const technologies: Technology[] = [
   {
     label: "Vite",
     name: "vite",
+    },
+  {
+    label: "Dokploy",
+    name: "dokploy",
+  },
+  {
+    label: "Docker",
+    name: "docker",
   },
   {
     label: "Vercel",
@@ -82,6 +90,10 @@ const technologies: Technology[] = [
   {
     label: "ThirdWeb",
     name: "thirdweb",
+    },
+    {
+        label: "Cloudflare Domains",
+        name: "cloudflare",
   },
   {
     label: "Docusaurus",
