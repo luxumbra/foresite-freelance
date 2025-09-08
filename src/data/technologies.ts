@@ -6,7 +6,6 @@ type LogoWall = {
   size: "large" | "medium" | "small";
   tech: Technology[];
   slider?: boolean;
-
 };
 const technologies: Technology[] = [
   { name: "css3", label: "CSS3" },
@@ -66,7 +65,7 @@ const technologies: Technology[] = [
   {
     label: "Vite",
     name: "vite",
-    },
+  },
   {
     label: "Dokploy",
     name: "dokploy",
@@ -90,10 +89,10 @@ const technologies: Technology[] = [
   {
     label: "ThirdWeb",
     name: "thirdweb",
-    },
-    {
-        label: "Cloudflare Domains",
-        name: "cloudflare",
+  },
+  {
+    label: "Cloudflare Domains",
+    name: "cloudflare",
   },
   {
     label: "Docusaurus",
