@@ -11,6 +11,7 @@ image: ./images/metagame.png
 status: archived
 tech:
 - React
+- NextJS
 - TypeScript
 - ChakraUI
 - Web3 / Blockchain
