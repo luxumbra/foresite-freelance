@@ -20,7 +20,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "@openpanel/astro": "^1.0.1",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.7",
+    "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.7.13",
     "astro-icon": "^1.1.5",
     "firebase": "^11.7.3",
