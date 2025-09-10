@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer.astro";
 import Nav from "@/components/Nav.astro";
 import { AnimateTitles } from "@/React/AnimateElements";
+import {OpenPanelComponent} from '@openpanel/astro';
 
 import "@/styles/global.css";
 
@@ -65,6 +66,12 @@ const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
       media="print"
       onload="this.media='all'"
     />
+    <OpenPanelComponent
+      clientId="69a2b702-37e1-4bad-9177-99bd04366452"
+      trackScreenViews={true}
+      trackAttributes={true}
+      trackOutgoingLinks={true}
+    />
     <script>
       const body = document.querySelector("body");
       body.classList.remove("no-js");
@@ -78,7 +85,7 @@ const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
 
     <title>{title}</title>
   </head>
-  <body class="bg-[var(--background)] no-js text-slate-300 lg:px-20 px-9">
+  <body class="bg-[var(--background)] no-js text-slate-300 lg:px-20 px-9 overflow-x-hidden">
     <Nav />
     <slot />
     <Footer />
