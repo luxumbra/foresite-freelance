@@ -25,13 +25,20 @@
   blockquote {
     @apply relative border-l-4 border-white p-6 my-6 rounded-lg;
 
+    &::before {
+      content: '\201C'!important;
+      @apply absolute text-9xl scale-[300%] min-w-8 top-5 left-2 -z-10 text-fuchsia-400/20 font-extrabold align-text-bottom inline-block translate-y-6 translate-x-3 font-serif;
+    }
+  }
+  blockquote p {
+    @apply relative z-10;
   }
   blockquote p:first-of-type {
     @apply overflow-visible relative;
 
     &::before {
-      content: '“';
-      @apply inline-block absolute text-9xl scale-150 transform-none min-w-8 top-5 left-2 -z-10 text-secondary/20 font-extrabold align-text-bottom;
+      content: '"';
+      @apply sr-only;
     }
   }
   blockquote p:last-of-type {
@@ -41,7 +48,7 @@
     }
   }
   blockquote cite {
-    @apply text-secondary/70 font-light;
+    @apply text-fuchsia-400 font-light;
   }
 
 
