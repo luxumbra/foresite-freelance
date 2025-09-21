@@ -4,8 +4,11 @@ import Nav from "@/components/Nav.astro";
 import { AnimateTitles } from "@/React/AnimateElements";
 import {OpenPanelComponent} from '@openpanel/astro';
 
+import {constants} from "@/lib/constants"
+
 import "@/styles/global.css";
 
+const {OPENPANEL_CLIENT_ID} = constants;
 interface Props {
   title: string;
   ogTitle?: string;
@@ -25,9 +28,9 @@ const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content={ogDescription || "Web Developer & Designer"}
+      content={ogDescription || "Web Developer & Designer with over 16 years experience"}
     />
-    <meta name="keywords" content={keywords || "web, developer, designer"} />
+    <meta name="keywords" content={keywords || "web, developer, designer, affordable web development, Wordpress"} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -39,11 +42,11 @@ const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       property="og:title"
-      content={ogTitle || "Dave Sayer, Web Developer & Designer"}
+      content={ogTitle || "Web Developer and Designer in wotton-Under-Edge, Gloucestershire"}
     />
     <meta
       property="og:description"
-      content={ogDescription || "Web Developer & Designer"}
+      content={ogDescription || "Web Developer & Designer with over 16 years experience in Wotton-Under-Edge, Gloucestershire"}
     />
     <meta
       property="og:image"
@@ -68,7 +71,7 @@ const { title, ogTitle, ogDescription, ogImage, keywords, ogUrl } = Astro.props;
     />
     <OpenPanelComponent
         apiUrl="https://analytics.api.frst.uk"
-      clientId="69a2b702-37e1-4bad-9177-99bd04366452"
+      clientId={OPENPANEL_CLIENT_ID}
       trackScreenViews={true}
       trackAttributes={true}
       trackOutgoingLinks={true}

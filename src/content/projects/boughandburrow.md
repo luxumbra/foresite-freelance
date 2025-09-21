@@ -1,5 +1,5 @@
 ---
-role: Creator, Maker & Designer
+role: Creator, Maker, Designer & Devloper
 industry: Eco-conscious crafts
 shortDescription: Brand identity, website design, print collateral, and product photography for a handmade eco-craft business I founded. This project showcases my ability to create a consistent, warm, and sustainable brand experience across digital and physical mediums.
 keywords: brand identity, logo design, business cards, website design, product photography, eco-friendly crafts, handmade products, Figma, Canva, Short.io, Moo.com
@@ -8,14 +8,18 @@ status: active
 tech:
 - NextJS
 - MedusaJS
-- Figma
-- Canva
-- Cloudflare Domains
+- Redis
+- Postgres
 - Docker
 - Dokploy
 - Stripe
+- TailwindCSS
+- Figma
+- Canva
+- Cloudflare Domains
 - Short.io
 - Moo.com
+- CSS3
 title: Bough & Burrow
 image: ./images/boughandburrow.png
 year: 2025

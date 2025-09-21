@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function AnimateTitles(): void {
+function AnimateTitles(): null {
   useGSAP(() => {
     // console.clear();
     const tl = gsap.timeline();
@@ -35,7 +35,7 @@ function AnimateTitles(): void {
   return null; // No content rendered — just enhancement
 }
 
-function AnimateTestimonial(): void {
+function AnimateTestimonial(): null {
   useGSAP(() => {
     const testimonials = document.querySelectorAll(".testimonial");
     const projectHeader = document.querySelector(".project-header");
@@ -85,7 +85,7 @@ function AnimateTestimonial(): void {
  * Animates the title (h1) and the list items within the section when they come into view. the list items are staggered.
  * @returns {JSX.Element|null} - Returns null as it does not render any content, only applies animations.
  */
-function AnimateTitleSection(): void {
+function AnimateTitleSection(): null {
   useGSAP(() => {
     // console.clear();
     const tl = gsap.timeline({
@@ -147,7 +147,7 @@ function AnimateTitleSection(): void {
  * Animates the navigation items on page load
  * @returns {JSX.Element|null} - Returns null as it does not render any content, only applies animations.
  */
-function AnimateNavItems(): void {
+function AnimateNavItems(): null {
   useGSAP(() => {
     const navItems = document.querySelectorAll("#main-nav li");
     const foucElement = document.querySelector("#main-nav .fouc");
@@ -181,7 +181,7 @@ function AnimateNavItems(): void {
   return null; // No content rendered — just enhancement
 }
 
-function AnimateSwipeIcon(): void {
+function AnimateSwipeIcon(): null {
   useGSAP(() => {
     // console.clear();
     const tl = gsap.timeline();

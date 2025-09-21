@@ -1,49 +1,81 @@
 type Technology = {
   name: string;
   label: string;
+  description?: string;
 };
 type LogoWall = {
   size: "large" | "medium" | "small";
   tech: Technology[];
   slider?: boolean;
+  fullWidth?: boolean;
 };
 const technologies: Technology[] = [
   { name: "css3", label: "CSS3" },
   { name: "html5", label: "HTML5" },
   { name: "javascript", label: "JavaScript" },
   {
-    label: "TypeScript",
     name: "typescript",
+    label: "TypeScript",
+    description: "Open source programming language",
   },
   {
-    label: "React",
     name: "react",
+    label: "React",
+    description: "Open source JavaScript library for building user interfaces",
   },
   {
-    label: "AstroJS",
     name: "astro",
+    label: "AstroJS",
+    description: "Open source static site generator",
   },
-  { name: "nextjs", label: "NextJS" },
   {
-    label: "Wordpress",
+    name: "nextjs",
+    label: "NextJS",
+    description: "Open source React framework",
+  },
+  {
+    name: "medusajs",
+    label: "MedusaJS",
+    description: "Open source e-commerce platform",
+  },
+  {
     name: "wordpress",
+    label: "Wordpress",
+    description: "Open source content management system",
   },
   {
-    label: "PHP",
     name: "php",
+    label: "PHP",
   },
   {
-    label: "TailwindCSS",
     name: "tailwindcss",
+    label: "TailwindCSS",
+    description: "Open source CSS framework",
   },
   {
-    label: "ChakraUI",
+    name: "redis",
+    label: "Redis",
+    description: "Open source in-memory database, used for caching",
+  },
+  {
+    name: "postgres",
+    label: "Postgres",
+    description: "Open source relational database",
+  },
+  {
     name: "chakraui",
+    label: "ChakraUI",
+    description: "Open source CSS framework",
   },
-  { name: "supabase", label: "Supabase" },
   {
-    label: "Web3 / Blockchain",
+    name: "supabase",
+    label: "Supabase",
+    description: "Open source postgres based backend",
+  },
+  {
     name: "blockchain",
+    label: "Web3 / Blockchain",
+    description: "Open source tech stack for decentralized applications",
   },
   { name: "api", label: "API" },
   { name: "git", label: "Git" },
@@ -51,72 +83,76 @@ const technologies: Technology[] = [
   { name: "nodejs", label: "NodeJS" },
   { name: "graphic-design", label: "Graphic Design" },
   {
-    label: "Figma",
     name: "figma",
+    label: "Figma",
   },
   {
-    label: "FigJam",
     name: "figjam",
+    label: "FigJam",
   },
   {
-    label: "React Three Fiber",
     name: "r3f",
+    label: "React Three Fiber",
+    description: "Open source React based Three.js library",
   },
   {
-    label: "Vite",
     name: "vite",
+    label: "Vite",
   },
   {
-    label: "Dokploy",
     name: "dokploy",
+    label: "Dokploy",
+    description:
+      "Open source SaaS for Vercel like deployments and application management",
   },
   {
-    label: "Docker",
     name: "docker",
+    label: "Docker",
+    description: "Open source container platform",
   },
   {
-    label: "Vercel",
     name: "vercel",
+    label: "Vercel",
   },
   {
-    label: "Netlify",
     name: "netlify",
+    label: "Netlify",
   },
   {
-    label: "Fleek",
     name: "fleek",
+    label: "Fleek",
   },
   {
-    label: "ThirdWeb",
     name: "thirdweb",
+    label: "ThirdWeb",
   },
   {
-    label: "Cloudflare Domains",
     name: "cloudflare",
+    label: "Cloudflare Domains",
   },
   {
-    label: "Docusaurus",
     name: "docusaurus",
+    label: "Docusaurus",
   },
   {
-    label: "Gatsby",
     name: "gatsby",
+    label: "Gatsby",
   },
   {
-    label: "Markdown",
     name: "markdown",
+    label: "Markdown",
   },
   {
-    label: "Canva",
     name: "canva",
+    label: "Canva",
   },
   {
-    label: "ThemeUI",
-    name: "themeui",
+    name: "chakraui",
+    label: "ChakraUI",
   },
   {
-    label: "React Spring",
     name: "spring",
+    label: "React Spring",
   },
 ];
 

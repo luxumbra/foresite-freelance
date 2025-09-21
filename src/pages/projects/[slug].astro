@@ -30,7 +30,7 @@ const { project, testimonial } = Astro.props;
 const { Content } = await render(project);
 
 const techLogos = project.data.tech.flatMap((label: string) => {
-  const found = technologies.find((t) => t.label === label);
+  const found = technologies.find((t) => t.label.toLowerCase() === label.toLowerCase());
 
   return found ? [found] : [];
 });
@@ -87,7 +87,7 @@ const techLogos = project.data.tech.flatMap((label: string) => {
             </li>
             <li class="text-white/70 font-light mb-4 text-xl capitalize">
               <span class="sr-only">Technology & Skills used:</span>
-              <LogoWall tech={techLogos} size="small" />
+              <LogoWall tech={techLogos} size="small" fullWidth />
             </li>
           </ul>
         </div>

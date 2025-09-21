@@ -1,0 +1,111 @@
+---
+import { Icon } from "astro-icon/components";
+import apiIcon from "@/icons/api.svg?raw";
+import astroIcon from "@/icons/astro.svg?raw";
+import bashIcon from "@/icons/bash.svg?raw";
+import blockchainIcon from "@/icons/blockchain.svg?raw";
+import canvaIcon from "@/icons/canva.svg?raw";
+import chakrauiIcon from "@/icons/chakraui.svg?raw";
+import cloudflareIcon from "@/icons/cloudflare.svg?raw";
+import css3Icon from "@/icons/css3.svg?raw";
+import dockerIcon from "@/icons/docker.svg?raw";
+import docusaurusIcon from "@/icons/docusaurus.svg?raw";
+import dokployIcon from "@/icons/dokploy.svg?raw";
+import figmaIcon from "@/icons/figma.svg?raw";
+import figjamIcon from "@/icons/figjam.svg?raw";
+import fleekIcon from "@/icons/fleek.svg?raw";
+import frstukIcon from "@/icons/FRST.UK.svg?raw";
+import gatsbyIcon from "@/icons/gatsby.svg?raw";
+import gitIcon from "@/icons/git.svg?raw";
+import githubIcon from "@/icons/github.svg?raw";
+import graphicDesignIcon from "@/icons/graphic-design.svg?raw";
+import html5Icon from "@/icons/html5.svg?raw";
+import javascriptIcon from "@/icons/javascript.svg?raw";
+import markdownIcon from "@/icons/markdown.svg?raw";
+import medusajsIcon from "@/icons/medusajs.svg?raw";
+import mysqlIcon from "@/icons/mysql.svg?raw";
+import netlifyIcon from "@/icons/netlify.svg?raw";
+import nextIcon from "@/icons/next.svg?raw";
+import nextjsIcon from "@/icons/nextjs.svg?raw";
+import nodejsIcon from "@/icons/nodejs.svg?raw";
+import phpIcon from "@/icons/php.svg?raw";
+import postgresIcon from "@/icons/postgres.svg?raw";
+import reactIcon from "@/icons/react.svg?raw";
+import redisIcon from "@/icons/redis.svg?raw";
+import springIcon from "@/icons/spring.svg?raw";
+import supabaseIcon from "@/icons/supabase.svg?raw";
+import tailwindcssIcon from "@/icons/tailwindcss.svg?raw";
+import thirdwebIcon from "@/icons/thirdweb.svg?raw";
+import threejsIcon from "@/icons/threejs.svg?raw";
+import typescriptIcon from "@/icons/typescript.svg?raw";
+import vercelIcon from "@/icons/vercel.svg?raw";
+import viteIcon from "@/icons/vite.svg?raw";
+import vueIcon from "@/icons/vue.svg?raw";
+import wordpressIcon from "@/icons/wordpress.svg?raw";
+
+interface Props {
+  name: string;
+  wrapperClass?: string;
+  svgClass?: string;
+}
+
+const { name, wrapperClass = "", svgClass = "" } = Astro.props;
+
+
+// Map technology names to their imported SVG content (case-insensitive)
+const icons: Record<string, string> = {
+  api: apiIcon,
+  astro: astroIcon,
+  bash: bashIcon,
+  blockchain: blockchainIcon,
+  canva: canvaIcon,
+  chakraui: chakrauiIcon,
+  cloudflare: cloudflareIcon,
+  css3: css3Icon,
+  docker: dockerIcon,
+  docusaurus: docusaurusIcon,
+  dokploy: dokployIcon,
+  figma: figmaIcon,
+  figjam: figjamIcon,
+  fleek: fleekIcon,
+  frstuk: frstukIcon,
+  gatsby: gatsbyIcon,
+  git: gitIcon,
+  github: githubIcon,
+  "graphic-design": graphicDesignIcon,
+  html5: html5Icon,
+  javascript: javascriptIcon,
+  markdown: markdownIcon,
+  medusajs: medusajsIcon,
+  mysql: mysqlIcon,
+  netlify: netlifyIcon,
+  next: nextIcon,
+  nextjs: nextjsIcon,
+  nodejs: nodejsIcon,
+  php: phpIcon,
+  postgres: postgresIcon,
+  r3f: threejsIcon,
+  react: reactIcon,
+  redis: redisIcon,
+  spring: springIcon,
+  supabase: supabaseIcon,
+  tailwindcss: tailwindcssIcon,
+  thirdweb: thirdwebIcon,
+  typescript: typescriptIcon,
+  vercel: vercelIcon,
+  vite: viteIcon,
+  vue: vueIcon,
+  wordpress: wordpressIcon,
+};
+
+const IconSvg = icons[name.toLowerCase()] ?? null;
+---
+
+{
+  IconSvg ? (
+    <div class={`inline-flex items-center justify-center icon-wrapper ${wrapperClass}`}>
+      <Icon name={name} class={svgClass} />
+    </div>
+  ) : null
+}
+

@@ -16,5 +16,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "include": ["src/**/*", "astro.config.ts", "astro.config.mjs"]
+  "include": ["src/**/*", "astro.config.ts", "astro.config.mjs", "src/lib/constants.ts"]
 }

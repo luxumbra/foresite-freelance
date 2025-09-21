@@ -1,7 +1,15 @@
 @import "./typography.css";
 @import "tailwindcss";
 
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: dark --default;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -12,13 +20,19 @@
   --white-icon-tr: #f3f3f310;
 }
 
-.glitch-wrapper {
-  mask-size: contain;
-  mask-repeat: repeat space;
-}
+@layer base {
 
-abbr:hover {
-  @apply cursor-help
+    /* body div {
+         @apply outline-1 outline-red-400;
+    } */
+    .glitch-wrapper {
+      mask-size: contain;
+      mask-repeat: repeat space;
+    }
+
+    abbr:hover {
+      @apply cursor-help
+    }
 }
 
 /* div {

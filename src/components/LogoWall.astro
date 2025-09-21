@@ -1,8 +1,8 @@
 ---
-import type { LogoWall } from "@/data/technologies";
-import Icon from "./Icon.astro";
+import type { LogoWall, Technology } from "@/data/technologies";
+import BBIcon from "./BBIcon.astro";
 
-const { size, tech, slider } = Astro.props as LogoWall;
+const { fullWidth, size, tech, slider } = Astro.props as LogoWall;
 
 const wrapperClasses = (size: LogoWall["size"]) => {
   let classname = "";
@@ -98,25 +98,27 @@ const svgSize = (size: LogoWall["size"]) => {
 
   switch (size) {
     case "small":
-      classname = "w-4";
+      classname = "h-4";
       break;
     case "medium":
-      classname = "w-6";
+      classname = "h-6";
       break;
     case "large":
-      classname = "w-8";
+      classname = "h-8";
       break;
     default:
-      classname = "w-8";
+      classname = "h-8";
       break;
   }
   return classname;
 };
-const resultsLimit = (size: LogoWall["size"]) => {
+const resultsLimit = (size: LogoWall["size"], fullWidth?: LogoWall["fullWidth"]) => {
   let limit: number;
+  const extra = fullWidth ? 10 : 0;
+
   switch (size) {
     case "small":
-      limit = 6;
+      limit = 6 + extra;
       break;
     case "medium":
       limit = 100;
@@ -143,7 +145,7 @@ const techList =
   <div
     class:list={[
       "pointer-events-none absolute inset-y-0 left-0 bg-gradient-to-r from-[var(--background)] to-transparent z-20",
-      size == "small" || size == "medium" ? "to-5%" : "to-100%",
+      size == "small" || size == "medium" ? "to-3%" : "to-100%",
       innerClasses(size),
     ]}
   >
@@ -166,29 +168,33 @@ const techList =
   >
     {
       techList.map((tech, i) => {
-        if (i >= resultsLimit(size)) return null;
+        if (i >= resultsLimit(size, fullWidth)) return null;
 
         return (
+        <div class="tooltip" data-tooltip={tech.description || ""}>
           <div
             class:list={[
               "flex items-center justify-start transition-all duration-300",
               itemGap(size),
             ]}
           >
-            <Icon
-              name={tech.name ? tech.name : ""}
-              wrapperClass="object-cover transition-transform opacity-60 flex-shrink"
-              svgClass={`h-auto ${svgSize(size)} fill-slate-400`}
-            />
+            {tech.name ? (
+              <BBIcon
+                name={tech.name}
+                wrapperClass="object-cover transition-transform opacity-60 flex-shrink"
+                svgClass={`w-auto ${svgSize(size)} fill-slate-300 text-slate-300`}
+              />
+            ) : null}
             <span
               class:list={[
-                "font-medium text-[var(--white-icon)]",
+                "font-medium text-[var(--white-icon)] text-nowrap",
                 fontSize(size),
               ]}
             >
               {tech.label}
             </span>
           </div>
+        </div>
         );
       })
     }
